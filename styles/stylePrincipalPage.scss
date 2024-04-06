@@ -113,8 +113,8 @@ $light_grey_color: #a39fbdb4;
 
         button{
             padding: 10px 20px;
-            background-color: #fff ;
-            color: black;
+            background-color: #e8ddca;
+            color: $almost_black_color;
             cursor: pointer;
             width: 150px;
             border-radius: 10px;
@@ -142,20 +142,20 @@ $light_grey_color: #a39fbdb4;
         input[type="text"]{
             padding: 10px 20px; 
             width: 500px; 
-            border: 1px solid #ddd; 
+            border: 1px solid $dark_green_color; 
             border-radius: 15px; 
-            background-color: #f5f5f5; 
+            background-color: #e8ddca; 
             font-size: 15px; 
-            color: #333; 
+            color: $almost_black_color; 
             transition: border-color 0.3s ease;
             margin: 2px;
 
             &:hover{
-                border-color: #999; 
+                border-color: $dark_blue_color; 
             }
 
             &:focus{
-                border-color: #555;
+                border-color: $dark_green_color;
                 box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
                 outline: none; /* sterge outline ul pus by default */
             }
