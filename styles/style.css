@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/carte.webp);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.header .header__logo {
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.header .header__title {
+  width: 90%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  text-align: center;
+  font-size: 40px;
+  color: #efd6ac;
+}
+
+.main {
+  width: 50%;
+  margin: auto;
+  padding: 50px 0;
+}
+
+.account-form {
+  border: 1px solid #1d153a;
+  border-radius: 10px;
+  margin: 50px 0;
+  padding: 10px 20px;
+  background-color: #183a37;
+}
+.account-form button {
+  margin: 10px 0;
+  width: 250px;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.account-form__input {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: #efd6ac;
+  border-radius: 10px;
+}
+.account-form__submit-btn {
+  display: inline;
+  text-decoration: none;
+  color: #efd6ac;
+  border: 1px solid #efd6ac;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  font-size: large;
+}
+.account-form__submit-btn a {
+  text-decoration: none;
+  color: #efd6ac;
+}
+.account-form__submit-btn:hover {
+  border: 2px solid #1d153a;
+  background: rgba(29, 21, 58, 0.3843137255);
+  transition: 0.5s;
+}
+
+.account-message {
+  color: #efd6ac;
+  font-size: 20px;
+  margin-left: 5%;
+}
+.account-message__link {
+  color: #432534;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+.footer__links .footer__list .footer__item {
+  list-style: none; /*fara bullets*/
+  display: inline-block; /*afiseaza textul orizontal*/
+  padding: 8px 12px; /*spatiu*/
+  position: relative;
+  margin-right: 20px;
+}
+.footer__links .footer__list .footer__item a {
+  color: #efd6ac;
+  font-weight: 500;
+  text-decoration: none; /*sa nu apara cu linia aia de la linkuri*/
+  font-size: 15px;
+  font-family: "Poppins", sans-serif; /*vezi google fonts*/
+}
+.footer__links .footer__list .footer__item::after {
+  /*liniuta de sub linkuri*/
+  content: "";
+  width: 0%; /*face ca liniuta sa dispara, cu 100% apare*/
+  height: 2px;
+  background: #c23212;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.footer__links .footer__list .footer__item:hover::after {
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 120px;
+  align-items: center;
+}
+.button-container__row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.button-container__button {
+  display: inline-block;
+  padding: 10px 20px;
+  width: 165px;
+  text-align: center;
+  border: 2px solid #183a37;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba(163, 159, 189, 0.7058823529);
+  color: #183a37;
+  font-weight: 700;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-right: 20px;
+}
+.button-container__button:hover {
+  background-color: #efd6ac;
+}
+.button-container__button input[type=checkbox]:checked + label {
+  background-color: #efd6ac;
+  color: #efd6ac;
+}
+
+.main .continue-link {
+  display: block;
+  text-align: center;
+}
+
+.continue-link {
+  display: inline-block;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.continue-link a {
+  text-decoration: none;
+  color: #efd6ac;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 34px;
+  font-size: large;
+  background: #432534;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+.continue-link a:hover {
+  background-color: rgba(67, 37, 52, 0.7098039216);
+}/*# sourceMappingURL=style.css.map */
