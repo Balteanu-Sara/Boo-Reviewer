@@ -113,16 +113,18 @@ $light_grey_color: #a39fbdb4;
         justify-content: space-around;
         background-color: $dark_purple_color;
         border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
         h2{
-            padding: 5px;
+            padding: 10px;
             border-bottom: 3px $light_pink_color solid;
             color: $light_pink_color;
+            margin-bottom: 10px;;
         }
 
         ul{
             list-style: none;
-            padding: 10px 10px;
+            padding: 10px;
 
             li{
                 padding: 20px;
@@ -133,19 +135,32 @@ $light_grey_color: #a39fbdb4;
                 border-radius: 10px;
                 background-color: $light_pink_color;
                 color: $dark_purple_color;
+                transition: all 0.3s;
+
+                &:hover{
+                    background-color: lighten($light_pink_color, 10%);
+                    transform: translateY(-5px);
+                }
 
                 p{
                     display: inline;
                     margin-left: 20px;
+                    font-size: 20px;
                 }
 
                 button{
-                    padding: 5px;
+                    padding: 8px 15px;
                     border-radius: 10px;
+                    border: 2px solid $light_grey_color;
                     border-color: $light_grey_color;
-                    border-style: groove 5; 
                     color: aliceblue;
                     background-color: #f44336;
+                    transition: all 0.3s;
+
+                    &:hover{
+                        background-color: darken(#f44336, 10%);
+                        transform: translateY(-3px);
+                    }
                 }
                 
             }
@@ -160,16 +175,18 @@ $light_grey_color: #a39fbdb4;
         justify-content: space-around;
         background-color: $dark_purple_color;
         border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
         h2{
-            padding: 5px;
+            padding: 10px;
             border-bottom: 3px $light_pink_color solid;
             color: $light_pink_color;
+            margin-bottom: 10px;;
         }
 
         ul{
             list-style: none;
-            padding: 10px 10px;
+            padding: 10px;
 
             li{
                 padding: 20px;
@@ -180,19 +197,32 @@ $light_grey_color: #a39fbdb4;
                 border-radius: 10px;
                 background-color: $light_pink_color;
                 color: $dark_purple_color;
+                transition: all 0.3s;
+
+                &:hover{
+                    background-color: lighten($light_pink_color, 10%);
+                    transform: translateY(-5px);
+                }
 
                 p{
                     display: inline;
                     margin-left: 20px;
+                    font-size: 20px;
                 }
 
                 button{
-                    padding: 5px;
+                    padding: 8px 15px;
                     border-radius: 10px;
+                    border: 2px solid $light_grey_color;
                     border-color: $light_grey_color;
-                    border-style: groove 5; 
                     color: aliceblue;
                     background-color: $emerald_color;
+                    transition: all 0.3s;
+
+                    &:hover{
+                        background-color: darken($emerald_color, 10%);
+                        transform: translateY(-3px);
+                    }
                 }
                 
             }
