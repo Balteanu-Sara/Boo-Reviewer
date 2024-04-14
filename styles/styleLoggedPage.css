@@ -181,6 +181,13 @@
   .wrapper__containers__elem p span {
     font-style: italic;
   }
+  .wrapper__containers__elem a {
+    text-decoration: none;
+    color: #1d153a;
+  }
+  .wrapper__containers__elem a:hover {
+    color: #183a37;
+  }
   .wrapper__containers__elem ol {
     padding: 5px;
   }
@@ -234,6 +241,180 @@
     transition: 0.5s;
   }
   .wrapper__footer ul li:hover::after {
+    width: 100%;
+  }
+  .wrapperLogged {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 50px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrapperLogged__header {
+    display: flex;
+    padding: 10px;
+    justify-self: flex-start;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .wrapperLogged__header--mod1 button {
+    padding: 10px 20px;
+    background-color: #e8ddca;
+    color: #04151f;
+    cursor: pointer;
+    width: 50px;
+    border-radius: 10px;
+    border: 0.5px solid #ddd;
+    margin: 2px;
+  }
+  .wrapperLogged__header--mod1 button:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperLogged__header--mod1 button a {
+    text-decoration: none;
+    color: black;
+  }
+  .wrapperLogged__header--mod1 button a:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperLogged__header--mod1 input[type=text] {
+    padding: 10px 20px;
+    width: 250px;
+    border: 1px solid #183a37;
+    border-radius: 15px;
+    background-color: #e8ddca;
+    font-size: 15px;
+    color: #04151f;
+    transition: border-color 0.3s ease;
+    margin: 2px;
+  }
+  .wrapperLogged__header--mod1 input[type=text]:hover {
+    border-color: #1d153a;
+  }
+  .wrapperLogged__header--mod1 input[type=text]:focus {
+    border-color: #183a37;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    outline: none; /* sterge outline ul pus by default */
+  }
+  .wrapperLogged__header--mod2 button {
+    padding: 10px;
+    background-color: #e8ddca;
+    color: #04151f;
+    cursor: pointer;
+    width: 80px;
+    border-radius: 10px;
+    border: 0.5px solid #ddd;
+    margin: 2px;
+  }
+  .wrapperLogged__header--mod2 button:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperLogged__header--mod2 button a {
+    text-decoration: none;
+    color: black;
+  }
+  .wrapperLogged__header--mod2 button a p {
+    font-size: x-small;
+  }
+  .wrapperLogged__header--mod2 button a:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperLogged__containers {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .wrapperLogged__containers__elem {
+    background-color: #efd6ac; /* Light gray background */
+    color: #183a37; /* Dark text color */
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    position: relative;
+  }
+  .wrapperLogged__containers__elem h2 {
+    padding: 5px 0px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  .wrapperLogged__containers__elem p {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    padding: 2px;
+  }
+  .wrapperLogged__containers__elem p span {
+    font-style: italic;
+  }
+  .wrapperLogged__containers__elem a {
+    text-decoration: none;
+    color: #1d153a;
+  }
+  .wrapperLogged__containers__elem a:hover {
+    color: #183a37;
+  }
+  .wrapperLogged__containers__elem ol {
+    padding: 5px;
+  }
+  .wrapperLogged__containers__elem ol li {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  .wrapperLogged__containers__elem ol li span {
+    font-style: italic;
+  }
+  .wrapperLogged__containers__elem strong {
+    font-weight: bolder;
+  }
+  .wrapperLogged__containers__elem:hover {
+    content: "";
+    height: 100%;
+    background: linear-gradient(45deg, #efd6ac, #432534); /* Gradient background */
+    border-radius: 20px;
+    transform: translateY(-5px);
+    color: #04151f; /* White text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .wrapperLogged__footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    align-self: center;
+    justify-self: flex-end;
+  }
+  .wrapperLogged__footer ul li {
+    list-style: none; /*fara bullets*/
+    display: inline-block; /*afiseaza textul orizontal*/
+    padding: 8px 12px; /*spatiu*/
+    position: relative;
+    margin-right: 20px;
+  }
+  .wrapperLogged__footer ul li a {
+    /*culorile link-urilor*/
+    color: #efd6ac;
+    text-decoration: none; /*sa nu apara cu linia aia de la linkuri*/
+    font-size: 15px;
+    font-family: "Poppins", sans-serif; /*vezi google fonts*/
+  }
+  .wrapperLogged__footer ul li::after {
+    /*liniuta de sub linkuri*/
+    content: "";
+    width: 0%; /*face ca liniuta sa dispara, cu 100% apare*/
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+  .wrapperLogged__footer ul li:hover::after {
     width: 100%;
   }
 }
@@ -423,6 +604,13 @@
   .wrapper__containers__elem p span {
     font-style: italic;
   }
+  .wrapper__containers__elem a {
+    text-decoration: none;
+    color: #1d153a;
+  }
+  .wrapper__containers__elem a:hover {
+    color: #183a37;
+  }
   .wrapper__containers__elem ol {
     padding: 5px;
   }
@@ -476,6 +664,180 @@
     transition: 0.5s;
   }
   .wrapper__footer ul li:hover::after {
+    width: 100%;
+  }
+  .wrapperLogged {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 50px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrapperLogged__header {
+    display: flex;
+    padding: 10px;
+    justify-self: flex-start;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .wrapperLogged__header--mod1 button {
+    padding: 10px 20px;
+    background-color: #e8ddca;
+    color: #04151f;
+    cursor: pointer;
+    width: 50px;
+    border-radius: 10px;
+    border: 0.5px solid #ddd;
+    margin: 2px;
+  }
+  .wrapperLogged__header--mod1 button:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperLogged__header--mod1 button a {
+    text-decoration: none;
+    color: black;
+  }
+  .wrapperLogged__header--mod1 button a:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperLogged__header--mod1 input[type=text] {
+    padding: 10px 20px;
+    width: 250px;
+    border: 1px solid #183a37;
+    border-radius: 15px;
+    background-color: #e8ddca;
+    font-size: 15px;
+    color: #04151f;
+    transition: border-color 0.3s ease;
+    margin: 2px;
+  }
+  .wrapperLogged__header--mod1 input[type=text]:hover {
+    border-color: #1d153a;
+  }
+  .wrapperLogged__header--mod1 input[type=text]:focus {
+    border-color: #183a37;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    outline: none; /* sterge outline ul pus by default */
+  }
+  .wrapperLogged__header--mod2 button {
+    padding: 10px;
+    background-color: #e8ddca;
+    color: #04151f;
+    cursor: pointer;
+    width: 80px;
+    border-radius: 10px;
+    border: 0.5px solid #ddd;
+    margin: 2px;
+  }
+  .wrapperLogged__header--mod2 button:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperLogged__header--mod2 button a {
+    text-decoration: none;
+    color: black;
+  }
+  .wrapperLogged__header--mod2 button a p {
+    font-size: x-small;
+  }
+  .wrapperLogged__header--mod2 button a:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperLogged__containers {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .wrapperLogged__containers__elem {
+    background-color: #efd6ac; /* Light gray background */
+    color: #183a37; /* Dark text color */
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    position: relative;
+  }
+  .wrapperLogged__containers__elem h2 {
+    padding: 5px 0px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  .wrapperLogged__containers__elem p {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    padding: 2px;
+  }
+  .wrapperLogged__containers__elem p span {
+    font-style: italic;
+  }
+  .wrapperLogged__containers__elem a {
+    text-decoration: none;
+    color: #1d153a;
+  }
+  .wrapperLogged__containers__elem a:hover {
+    color: #183a37;
+  }
+  .wrapperLogged__containers__elem ol {
+    padding: 5px;
+  }
+  .wrapperLogged__containers__elem ol li {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  .wrapperLogged__containers__elem ol li span {
+    font-style: italic;
+  }
+  .wrapperLogged__containers__elem strong {
+    font-weight: bolder;
+  }
+  .wrapperLogged__containers__elem:hover {
+    content: "";
+    height: 100%;
+    background: linear-gradient(45deg, #efd6ac, #432534); /* Gradient background */
+    border-radius: 20px;
+    transform: translateY(-5px);
+    color: #04151f; /* White text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .wrapperLogged__footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    align-self: center;
+    justify-self: flex-end;
+  }
+  .wrapperLogged__footer ul li {
+    list-style: none; /*fara bullets*/
+    display: inline-block; /*afiseaza textul orizontal*/
+    padding: 8px 12px; /*spatiu*/
+    position: relative;
+    margin-right: 20px;
+  }
+  .wrapperLogged__footer ul li a {
+    /*culorile link-urilor*/
+    color: #efd6ac;
+    text-decoration: none; /*sa nu apara cu linia aia de la linkuri*/
+    font-size: 15px;
+    font-family: "Poppins", sans-serif; /*vezi google fonts*/
+  }
+  .wrapperLogged__footer ul li::after {
+    /*liniuta de sub linkuri*/
+    content: "";
+    width: 0%; /*face ca liniuta sa dispara, cu 100% apare*/
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+  .wrapperLogged__footer ul li:hover::after {
     width: 100%;
   }
 }
@@ -664,6 +1026,13 @@
   .wrapper__containers__elem p span {
     font-style: italic;
   }
+  .wrapper__containers__elem a {
+    text-decoration: none;
+    color: #1d153a;
+  }
+  .wrapper__containers__elem a:hover {
+    color: #183a37;
+  }
   .wrapper__containers__elem ol {
     padding: 5px;
   }
@@ -717,6 +1086,180 @@
     transition: 0.5s;
   }
   .wrapper__footer ul li:hover::after {
+    width: 100%;
+  }
+  .wrapperLogged {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 50px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrapperLogged__header {
+    display: flex;
+    padding: 10px;
+    justify-self: flex-start;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .wrapperLogged__header--mod1 button {
+    padding: 10px 20px;
+    background-color: #e8ddca;
+    color: #04151f;
+    cursor: pointer;
+    width: 50px;
+    border-radius: 10px;
+    border: 0.5px solid #ddd;
+    margin: 2px;
+  }
+  .wrapperLogged__header--mod1 button:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperLogged__header--mod1 button a {
+    text-decoration: none;
+    color: black;
+  }
+  .wrapperLogged__header--mod1 button a:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperLogged__header--mod1 input[type=text] {
+    padding: 10px 20px;
+    width: 250px;
+    border: 1px solid #183a37;
+    border-radius: 15px;
+    background-color: #e8ddca;
+    font-size: 15px;
+    color: #04151f;
+    transition: border-color 0.3s ease;
+    margin: 2px;
+  }
+  .wrapperLogged__header--mod1 input[type=text]:hover {
+    border-color: #1d153a;
+  }
+  .wrapperLogged__header--mod1 input[type=text]:focus {
+    border-color: #183a37;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    outline: none; /* sterge outline ul pus by default */
+  }
+  .wrapperLogged__header--mod2 button {
+    padding: 10px;
+    background-color: #e8ddca;
+    color: #04151f;
+    cursor: pointer;
+    width: 80px;
+    border-radius: 10px;
+    border: 0.5px solid #ddd;
+    margin: 2px;
+  }
+  .wrapperLogged__header--mod2 button:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperLogged__header--mod2 button a {
+    text-decoration: none;
+    color: black;
+  }
+  .wrapperLogged__header--mod2 button a p {
+    font-size: x-small;
+  }
+  .wrapperLogged__header--mod2 button a:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperLogged__containers {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .wrapperLogged__containers__elem {
+    background-color: #efd6ac; /* Light gray background */
+    color: #183a37; /* Dark text color */
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    position: relative;
+  }
+  .wrapperLogged__containers__elem h2 {
+    padding: 5px 0px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  .wrapperLogged__containers__elem p {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    padding: 2px;
+  }
+  .wrapperLogged__containers__elem p span {
+    font-style: italic;
+  }
+  .wrapperLogged__containers__elem a {
+    text-decoration: none;
+    color: #1d153a;
+  }
+  .wrapperLogged__containers__elem a:hover {
+    color: #183a37;
+  }
+  .wrapperLogged__containers__elem ol {
+    padding: 5px;
+  }
+  .wrapperLogged__containers__elem ol li {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  .wrapperLogged__containers__elem ol li span {
+    font-style: italic;
+  }
+  .wrapperLogged__containers__elem strong {
+    font-weight: bolder;
+  }
+  .wrapperLogged__containers__elem:hover {
+    content: "";
+    height: 100%;
+    background: linear-gradient(45deg, #efd6ac, #432534); /* Gradient background */
+    border-radius: 20px;
+    transform: translateY(-5px);
+    color: #04151f; /* White text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .wrapperLogged__footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    align-self: center;
+    justify-self: flex-end;
+  }
+  .wrapperLogged__footer ul li {
+    list-style: none; /*fara bullets*/
+    display: inline-block; /*afiseaza textul orizontal*/
+    padding: 8px 12px; /*spatiu*/
+    position: relative;
+    margin-right: 20px;
+  }
+  .wrapperLogged__footer ul li a {
+    /*culorile link-urilor*/
+    color: #efd6ac;
+    text-decoration: none; /*sa nu apara cu linia aia de la linkuri*/
+    font-size: 15px;
+    font-family: "Poppins", sans-serif; /*vezi google fonts*/
+  }
+  .wrapperLogged__footer ul li::after {
+    /*liniuta de sub linkuri*/
+    content: "";
+    width: 0%; /*face ca liniuta sa dispara, cu 100% apare*/
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+  .wrapperLogged__footer ul li:hover::after {
     width: 100%;
   }
 }
@@ -905,6 +1448,13 @@
   .wrapper__containers__elem p span {
     font-style: italic;
   }
+  .wrapper__containers__elem a {
+    text-decoration: none;
+    color: #1d153a;
+  }
+  .wrapper__containers__elem a:hover {
+    color: #183a37;
+  }
   .wrapper__containers__elem ol {
     padding: 5px;
   }
@@ -958,6 +1508,180 @@
     transition: 0.5s;
   }
   .wrapper__footer ul li:hover::after {
+    width: 100%;
+  }
+  .wrapperLogged {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 50px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrapperLogged__header {
+    display: flex;
+    padding: 10px;
+    justify-self: flex-start;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .wrapperLogged__header--mod1 button {
+    padding: 10px 20px;
+    background-color: #e8ddca;
+    color: #04151f;
+    cursor: pointer;
+    width: 50px;
+    border-radius: 10px;
+    border: 0.5px solid #ddd;
+    margin: 2px;
+  }
+  .wrapperLogged__header--mod1 button:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperLogged__header--mod1 button a {
+    text-decoration: none;
+    color: black;
+  }
+  .wrapperLogged__header--mod1 button a:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperLogged__header--mod1 input[type=text] {
+    padding: 10px 20px;
+    width: 250px;
+    border: 1px solid #183a37;
+    border-radius: 15px;
+    background-color: #e8ddca;
+    font-size: 15px;
+    color: #04151f;
+    transition: border-color 0.3s ease;
+    margin: 2px;
+  }
+  .wrapperLogged__header--mod1 input[type=text]:hover {
+    border-color: #1d153a;
+  }
+  .wrapperLogged__header--mod1 input[type=text]:focus {
+    border-color: #183a37;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    outline: none; /* sterge outline ul pus by default */
+  }
+  .wrapperLogged__header--mod2 button {
+    padding: 10px;
+    background-color: #e8ddca;
+    color: #04151f;
+    cursor: pointer;
+    width: 80px;
+    border-radius: 10px;
+    border: 0.5px solid #ddd;
+    margin: 2px;
+  }
+  .wrapperLogged__header--mod2 button:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperLogged__header--mod2 button a {
+    text-decoration: none;
+    color: black;
+  }
+  .wrapperLogged__header--mod2 button a p {
+    font-size: x-small;
+  }
+  .wrapperLogged__header--mod2 button a:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperLogged__containers {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .wrapperLogged__containers__elem {
+    background-color: #efd6ac; /* Light gray background */
+    color: #183a37; /* Dark text color */
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    position: relative;
+  }
+  .wrapperLogged__containers__elem h2 {
+    padding: 5px 0px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  .wrapperLogged__containers__elem p {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    padding: 2px;
+  }
+  .wrapperLogged__containers__elem p span {
+    font-style: italic;
+  }
+  .wrapperLogged__containers__elem a {
+    text-decoration: none;
+    color: #1d153a;
+  }
+  .wrapperLogged__containers__elem a:hover {
+    color: #183a37;
+  }
+  .wrapperLogged__containers__elem ol {
+    padding: 5px;
+  }
+  .wrapperLogged__containers__elem ol li {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  .wrapperLogged__containers__elem ol li span {
+    font-style: italic;
+  }
+  .wrapperLogged__containers__elem strong {
+    font-weight: bolder;
+  }
+  .wrapperLogged__containers__elem:hover {
+    content: "";
+    height: 100%;
+    background: linear-gradient(45deg, #efd6ac, #432534); /* Gradient background */
+    border-radius: 20px;
+    transform: translateY(-5px);
+    color: #04151f; /* White text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .wrapperLogged__footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    align-self: center;
+    justify-self: flex-end;
+  }
+  .wrapperLogged__footer ul li {
+    list-style: none; /*fara bullets*/
+    display: inline-block; /*afiseaza textul orizontal*/
+    padding: 8px 12px; /*spatiu*/
+    position: relative;
+    margin-right: 20px;
+  }
+  .wrapperLogged__footer ul li a {
+    /*culorile link-urilor*/
+    color: #efd6ac;
+    text-decoration: none; /*sa nu apara cu linia aia de la linkuri*/
+    font-size: 15px;
+    font-family: "Poppins", sans-serif; /*vezi google fonts*/
+  }
+  .wrapperLogged__footer ul li::after {
+    /*liniuta de sub linkuri*/
+    content: "";
+    width: 0%; /*face ca liniuta sa dispara, cu 100% apare*/
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+  .wrapperLogged__footer ul li:hover::after {
     width: 100%;
   }
 }
@@ -1146,6 +1870,13 @@
   .wrapper__containers__elem p span {
     font-style: italic;
   }
+  .wrapper__containers__elem a {
+    text-decoration: none;
+    color: #1d153a;
+  }
+  .wrapper__containers__elem a:hover {
+    color: #183a37;
+  }
   .wrapper__containers__elem ol {
     padding: 5px;
   }
@@ -1199,6 +1930,180 @@
     transition: 0.5s;
   }
   .wrapper__footer ul li:hover::after {
+    width: 100%;
+  }
+  .wrapperLogged {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 50px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrapperLogged__header {
+    display: flex;
+    padding: 10px;
+    justify-self: flex-start;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .wrapperLogged__header--mod1 button {
+    padding: 10px 20px;
+    background-color: #e8ddca;
+    color: #04151f;
+    cursor: pointer;
+    width: 50px;
+    border-radius: 10px;
+    border: 0.5px solid #ddd;
+    margin: 2px;
+  }
+  .wrapperLogged__header--mod1 button:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperLogged__header--mod1 button a {
+    text-decoration: none;
+    color: black;
+  }
+  .wrapperLogged__header--mod1 button a:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperLogged__header--mod1 input[type=text] {
+    padding: 10px 20px;
+    width: 250px;
+    border: 1px solid #183a37;
+    border-radius: 15px;
+    background-color: #e8ddca;
+    font-size: 15px;
+    color: #04151f;
+    transition: border-color 0.3s ease;
+    margin: 2px;
+  }
+  .wrapperLogged__header--mod1 input[type=text]:hover {
+    border-color: #1d153a;
+  }
+  .wrapperLogged__header--mod1 input[type=text]:focus {
+    border-color: #183a37;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    outline: none; /* sterge outline ul pus by default */
+  }
+  .wrapperLogged__header--mod2 button {
+    padding: 10px;
+    background-color: #e8ddca;
+    color: #04151f;
+    cursor: pointer;
+    width: 80px;
+    border-radius: 10px;
+    border: 0.5px solid #ddd;
+    margin: 2px;
+  }
+  .wrapperLogged__header--mod2 button:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperLogged__header--mod2 button a {
+    text-decoration: none;
+    color: black;
+  }
+  .wrapperLogged__header--mod2 button a p {
+    font-size: x-small;
+  }
+  .wrapperLogged__header--mod2 button a:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperLogged__containers {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .wrapperLogged__containers__elem {
+    background-color: #efd6ac; /* Light gray background */
+    color: #183a37; /* Dark text color */
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    position: relative;
+  }
+  .wrapperLogged__containers__elem h2 {
+    padding: 5px 0px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  .wrapperLogged__containers__elem p {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    padding: 2px;
+  }
+  .wrapperLogged__containers__elem p span {
+    font-style: italic;
+  }
+  .wrapperLogged__containers__elem a {
+    text-decoration: none;
+    color: #1d153a;
+  }
+  .wrapperLogged__containers__elem a:hover {
+    color: #183a37;
+  }
+  .wrapperLogged__containers__elem ol {
+    padding: 5px;
+  }
+  .wrapperLogged__containers__elem ol li {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  .wrapperLogged__containers__elem ol li span {
+    font-style: italic;
+  }
+  .wrapperLogged__containers__elem strong {
+    font-weight: bolder;
+  }
+  .wrapperLogged__containers__elem:hover {
+    content: "";
+    height: 100%;
+    background: linear-gradient(45deg, #efd6ac, #432534); /* Gradient background */
+    border-radius: 20px;
+    transform: translateY(-5px);
+    color: #04151f; /* White text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .wrapperLogged__footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    align-self: center;
+    justify-self: flex-end;
+  }
+  .wrapperLogged__footer ul li {
+    list-style: none; /*fara bullets*/
+    display: inline-block; /*afiseaza textul orizontal*/
+    padding: 8px 12px; /*spatiu*/
+    position: relative;
+    margin-right: 20px;
+  }
+  .wrapperLogged__footer ul li a {
+    /*culorile link-urilor*/
+    color: #efd6ac;
+    text-decoration: none; /*sa nu apara cu linia aia de la linkuri*/
+    font-size: 15px;
+    font-family: "Poppins", sans-serif; /*vezi google fonts*/
+  }
+  .wrapperLogged__footer ul li::after {
+    /*liniuta de sub linkuri*/
+    content: "";
+    width: 0%; /*face ca liniuta sa dispara, cu 100% apare*/
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+  .wrapperLogged__footer ul li:hover::after {
     width: 100%;
   }
 }

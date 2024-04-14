@@ -191,6 +191,189 @@ $light_grey_color: #a39fbdb4;
                         font-style: italic;
                     }
                 }
+
+                a{
+                    text-decoration: none;
+                    color: $dark_blue_color;
+
+                    &:hover
+                    {
+                        color:$dark_green_color
+                    }
+                }
+    
+                ol {
+                    padding: 5px;
+                    
+                    li{
+                        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                        span{
+                            font-style: italic;
+                        }
+                    }
+                }
+    
+                strong{
+                    font-weight: bolder;
+                }
+    
+                &:hover{
+                    content: "";
+                    height: 100%;
+                    background: linear-gradient(45deg, $light_pink_color, $dark_purple_color); /* Gradient background */
+                    border-radius: 20px;
+                    transform: translateY(-5px);
+    
+                    color: $almost_black_color; /* White text color */
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
+    
+        &__footer{
+            width: 100%;
+            text-align: center;
+            padding : 10px 0px;
+            align-self: center;
+            justify-self: flex-end;
+    
+            ul li{
+                list-style: none; /*fara bullets*/
+                display: inline-block; /*afiseaza textul orizontal*/
+                padding: 8px 12px; /*spatiu*/
+                position: relative;
+                margin-right: 20px;
+    
+                a{
+                    /*culorile link-urilor*/
+                    color: $light_pink_color;
+                    text-decoration: none; /*sa nu apara cu linia aia de la linkuri*/
+                    font-size: 15px;
+                    font-family: "Poppins", sans-serif; /*vezi google fonts*/
+                }
+    
+                &::after{
+                    /*liniuta de sub linkuri*/
+                    content: "";
+                    width: 0%; /*face ca liniuta sa dispara, cu 100% apare*/
+                    height: 2px;
+                    background: #f44336;
+                    display: block;
+                    margin: auto;
+                    transition: 0.5s;
+                }
+    
+                &:hover::after{
+                    width:100%
+                }
+            }
+        }
+    }
+
+    .wrapperPrincipal{
+        margin: 20px 200px;
+        margin-bottom: 20px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        //justify-content: space-between;
+    
+        &__header{
+            display: flex;
+            padding: 10px;
+            justify-self: flex-start;
+            justify-content: space-around;
+            flex-direction: row;
+    
+            button{
+                padding: 10px 20px;
+                background-color: #e8ddca;
+                color: $almost_black_color;
+                cursor: pointer;
+                width: 150px;
+                border-radius: 10px;
+                border: 0.5px solid #ddd;
+                margin: 2px;
+    
+                &:hover{
+                    background-color: rgba(29,191,114, 0.7) ;
+                    color: #f44336;
+                    border-color:rgba(29,191,114, 0.7);
+                }
+        
+                a{
+                    text-decoration: none;
+                    color: black;
+    
+                    &:hover{
+                        background-color: rgba(29,191,114, 0.7) ;
+                        color: #f44336;
+                        border-color:rgba(29,191,114, 0.7);
+                    }
+                }
+            }
+    
+            input[type="text"]{
+                padding: 10px 20px; 
+                width: 500px; 
+                border: 1px solid $dark_green_color; 
+                border-radius: 15px; 
+                background-color: #e8ddca; 
+                font-size: 15px; 
+                color: $almost_black_color; 
+                transition: border-color 0.3s ease;
+                margin: 2px;
+    
+                &:hover{
+                    border-color: $dark_blue_color; 
+                }
+    
+                &:focus{
+                    border-color: $dark_green_color;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+                    outline: none; /* sterge outline ul pus by default */
+                }
+            }
+        }
+    
+        &__containers{
+            display: flex;
+            padding: 10px;
+            flex-direction: column;
+            justify-content: space-around;
+    
+            &__elem{
+                background-color: $light_pink_color; /* Light gray background */
+                color: $dark_green_color; /* Dark text color */
+                margin: 20px;
+                padding: 20px;
+                border-radius: 20px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+                position: relative;
+    
+                h2{
+                    padding: 5px 0px;
+                    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                }
+    
+                p{
+                    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    padding: 2px;
+    
+                    span{
+                        font-style: italic;
+                    }
+                }
+
+                a{
+                    text-decoration: none;
+                    color: $dark_blue_color;
+
+                    &:hover
+                    {
+                        color:$dark_green_color
+                    }
+                }
     
                 ol {
                     padding: 5px;
@@ -446,6 +629,189 @@ $light_grey_color: #a39fbdb4;
     
                     span{
                         font-style: italic;
+                    }
+                }
+
+                a{
+                    text-decoration: none;
+                    color: $dark_blue_color;
+
+                    &:hover
+                    {
+                        color:$dark_green_color
+                    }
+                }
+    
+                ol {
+                    padding: 5px;
+                    
+                    li{
+                        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                        span{
+                            font-style: italic;
+                        }
+                    }
+                }
+    
+                strong{
+                    font-weight: bolder;
+                }
+    
+                &:hover{
+                    content: "";
+                    height: 100%;
+                    background: linear-gradient(45deg, $light_pink_color, $dark_purple_color); /* Gradient background */
+                    border-radius: 20px;
+                    transform: translateY(-5px);
+    
+                    color: $almost_black_color; /* White text color */
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
+    
+        &__footer{
+            width: 100%;
+            text-align: center;
+            padding : 10px 0px;
+            align-self: center;
+            justify-self: flex-end;
+    
+            ul li{
+                list-style: none; /*fara bullets*/
+                display: inline-block; /*afiseaza textul orizontal*/
+                padding: 8px 12px; /*spatiu*/
+                position: relative;
+                margin-right: 20px;
+    
+                a{
+                    /*culorile link-urilor*/
+                    color: $light_pink_color;
+                    text-decoration: none; /*sa nu apara cu linia aia de la linkuri*/
+                    font-size: 15px;
+                    font-family: "Poppins", sans-serif; /*vezi google fonts*/
+                }
+    
+                &::after{
+                    /*liniuta de sub linkuri*/
+                    content: "";
+                    width: 0%; /*face ca liniuta sa dispara, cu 100% apare*/
+                    height: 2px;
+                    background: #f44336;
+                    display: block;
+                    margin: auto;
+                    transition: 0.5s;
+                }
+    
+                &:hover::after{
+                    width:100%
+                }
+            }
+        }
+    }
+
+    .wrapperPrincipal{
+        margin: 20px 200px;
+        margin-bottom: 20px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        //justify-content: space-between;
+    
+        &__header{
+            display: flex;
+            padding: 10px;
+            justify-self: flex-start;
+            justify-content: space-around;
+            flex-direction: row;
+    
+            button{
+                padding: 10px 20px;
+                background-color: #e8ddca;
+                color: $almost_black_color;
+                cursor: pointer;
+                width: 150px;
+                border-radius: 10px;
+                border: 0.5px solid #ddd;
+                margin: 2px;
+    
+                &:hover{
+                    background-color: rgba(29,191,114, 0.7) ;
+                    color: #f44336;
+                    border-color:rgba(29,191,114, 0.7);
+                }
+        
+                a{
+                    text-decoration: none;
+                    color: black;
+    
+                    &:hover{
+                        background-color: rgba(29,191,114, 0.7) ;
+                        color: #f44336;
+                        border-color:rgba(29,191,114, 0.7);
+                    }
+                }
+            }
+    
+            input[type="text"]{
+                padding: 10px 20px; 
+                width: 500px; 
+                border: 1px solid $dark_green_color; 
+                border-radius: 15px; 
+                background-color: #e8ddca; 
+                font-size: 15px; 
+                color: $almost_black_color; 
+                transition: border-color 0.3s ease;
+                margin: 2px;
+    
+                &:hover{
+                    border-color: $dark_blue_color; 
+                }
+    
+                &:focus{
+                    border-color: $dark_green_color;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+                    outline: none; /* sterge outline ul pus by default */
+                }
+            }
+        }
+    
+        &__containers{
+            display: flex;
+            padding: 10px;
+            flex-direction: column;
+            justify-content: space-around;
+    
+            &__elem{
+                background-color: $light_pink_color; /* Light gray background */
+                color: $dark_green_color; /* Dark text color */
+                margin: 20px;
+                padding: 20px;
+                border-radius: 20px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+                position: relative;
+    
+                h2{
+                    padding: 5px 0px;
+                    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                }
+    
+                p{
+                    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    padding: 2px;
+    
+                    span{
+                        font-style: italic;
+                    }
+                }
+
+                a{
+                    text-decoration: none;
+                    color: $dark_blue_color;
+
+                    &:hover
+                    {
+                        color:$dark_green_color
                     }
                 }
     
@@ -704,6 +1070,189 @@ $light_grey_color: #a39fbdb4;
                         font-style: italic;
                     }
                 }
+
+                a{
+                    text-decoration: none;
+                    color: $dark_blue_color;
+
+                    &:hover
+                    {
+                        color:$dark_green_color
+                    }
+                }
+    
+                ol {
+                    padding: 5px;
+                    
+                    li{
+                        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                        span{
+                            font-style: italic;
+                        }
+                    }
+                }
+    
+                strong{
+                    font-weight: bolder;
+                }
+    
+                &:hover{
+                    content: "";
+                    height: 100%;
+                    background: linear-gradient(45deg, $light_pink_color, $dark_purple_color); /* Gradient background */
+                    border-radius: 20px;
+                    transform: translateY(-5px);
+    
+                    color: $almost_black_color; /* White text color */
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
+    
+        &__footer{
+            width: 100%;
+            text-align: center;
+            padding : 10px 0px;
+            align-self: center;
+            justify-self: flex-end;
+    
+            ul li{
+                list-style: none; /*fara bullets*/
+                display: inline-block; /*afiseaza textul orizontal*/
+                padding: 8px 12px; /*spatiu*/
+                position: relative;
+                margin-right: 20px;
+    
+                a{
+                    /*culorile link-urilor*/
+                    color: $light_pink_color;
+                    text-decoration: none; /*sa nu apara cu linia aia de la linkuri*/
+                    font-size: 15px;
+                    font-family: "Poppins", sans-serif; /*vezi google fonts*/
+                }
+    
+                &::after{
+                    /*liniuta de sub linkuri*/
+                    content: "";
+                    width: 0%; /*face ca liniuta sa dispara, cu 100% apare*/
+                    height: 2px;
+                    background: #f44336;
+                    display: block;
+                    margin: auto;
+                    transition: 0.5s;
+                }
+    
+                &:hover::after{
+                    width:100%
+                }
+            }
+        }
+    }
+
+    .wrapperPrincipal{
+        margin: 20px 200px;
+        margin-bottom: 20px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        //justify-content: space-between;
+    
+        &__header{
+            display: flex;
+            padding: 10px;
+            justify-self: flex-start;
+            justify-content: space-around;
+            flex-direction: row;
+    
+            button{
+                padding: 10px 20px;
+                background-color: #e8ddca;
+                color: $almost_black_color;
+                cursor: pointer;
+                width: 150px;
+                border-radius: 10px;
+                border: 0.5px solid #ddd;
+                margin: 2px;
+    
+                &:hover{
+                    background-color: rgba(29,191,114, 0.7) ;
+                    color: #f44336;
+                    border-color:rgba(29,191,114, 0.7);
+                }
+        
+                a{
+                    text-decoration: none;
+                    color: black;
+    
+                    &:hover{
+                        background-color: rgba(29,191,114, 0.7) ;
+                        color: #f44336;
+                        border-color:rgba(29,191,114, 0.7);
+                    }
+                }
+            }
+    
+            input[type="text"]{
+                padding: 10px 20px; 
+                width: 500px; 
+                border: 1px solid $dark_green_color; 
+                border-radius: 15px; 
+                background-color: #e8ddca; 
+                font-size: 15px; 
+                color: $almost_black_color; 
+                transition: border-color 0.3s ease;
+                margin: 2px;
+    
+                &:hover{
+                    border-color: $dark_blue_color; 
+                }
+    
+                &:focus{
+                    border-color: $dark_green_color;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+                    outline: none; /* sterge outline ul pus by default */
+                }
+            }
+        }
+    
+        &__containers{
+            display: flex;
+            padding: 10px;
+            flex-direction: column;
+            justify-content: space-around;
+    
+            &__elem{
+                background-color: $light_pink_color; /* Light gray background */
+                color: $dark_green_color; /* Dark text color */
+                margin: 20px;
+                padding: 20px;
+                border-radius: 20px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+                position: relative;
+    
+                h2{
+                    padding: 5px 0px;
+                    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                }
+    
+                p{
+                    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    padding: 2px;
+    
+                    span{
+                        font-style: italic;
+                    }
+                }
+
+                a{
+                    text-decoration: none;
+                    color: $dark_blue_color;
+
+                    &:hover
+                    {
+                        color:$dark_green_color
+                    }
+                }
     
                 ol {
                     padding: 5px;
@@ -958,6 +1507,194 @@ $light_grey_color: #a39fbdb4;
     
                     span{
                         font-style: italic;
+                    }
+                }
+
+                a{
+                    text-decoration: none;
+                    color: $dark_blue_color;
+
+                    &:hover
+                    {
+                        color:$dark_green_color
+                    }
+                }
+    
+                ol {
+                    padding: 5px;
+                    
+                    li{
+                        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                        span{
+                            font-style: italic;
+                        }
+                    }
+                }
+    
+                strong{
+                    font-weight: bolder;
+                }
+
+                a{
+                    text-decoration: none;
+                    color: $dark_green_color;
+                }
+    
+                &:hover{
+                    content: "";
+                    height: 100%;
+                    background: linear-gradient(45deg, $light_pink_color, $dark_purple_color); /* Gradient background */
+                    border-radius: 20px;
+                    transform: translateY(-5px);
+    
+                    color: $almost_black_color; /* White text color */
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
+    
+        &__footer{
+            width: 100%;
+            text-align: center;
+            padding : 10px 0px;
+            align-self: center;
+            justify-self: flex-end;
+    
+            ul li{
+                list-style: none; /*fara bullets*/
+                display: inline-block; /*afiseaza textul orizontal*/
+                padding: 8px 12px; /*spatiu*/
+                position: relative;
+                margin-right: 20px;
+    
+                a{
+                    /*culorile link-urilor*/
+                    color: $light_pink_color;
+                    text-decoration: none; /*sa nu apara cu linia aia de la linkuri*/
+                    font-size: 15px;
+                    font-family: "Poppins", sans-serif; /*vezi google fonts*/
+                }
+    
+                &::after{
+                    /*liniuta de sub linkuri*/
+                    content: "";
+                    width: 0%; /*face ca liniuta sa dispara, cu 100% apare*/
+                    height: 2px;
+                    background: #f44336;
+                    display: block;
+                    margin: auto;
+                    transition: 0.5s;
+                }
+    
+                &:hover::after{
+                    width:100%
+                }
+            }
+        }
+    }
+
+    .wrapperPrincipal{
+        margin: 20px 200px;
+        margin-bottom: 20px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        //justify-content: space-between;
+    
+        &__header{
+            display: flex;
+            padding: 10px;
+            justify-self: flex-start;
+            justify-content: space-around;
+            flex-direction: row;
+    
+            button{
+                padding: 10px 20px;
+                background-color: #e8ddca;
+                color: $almost_black_color;
+                cursor: pointer;
+                width: 150px;
+                border-radius: 10px;
+                border: 0.5px solid #ddd;
+                margin: 2px;
+    
+                &:hover{
+                    background-color: rgba(29,191,114, 0.7) ;
+                    color: #f44336;
+                    border-color:rgba(29,191,114, 0.7);
+                }
+        
+                a{
+                    text-decoration: none;
+                    color: black;
+    
+                    &:hover{
+                        background-color: rgba(29,191,114, 0.7) ;
+                        color: #f44336;
+                        border-color:rgba(29,191,114, 0.7);
+                    }
+                }
+            }
+    
+            input[type="text"]{
+                padding: 10px 20px; 
+                width: 500px; 
+                border: 1px solid $dark_green_color; 
+                border-radius: 15px; 
+                background-color: #e8ddca; 
+                font-size: 15px; 
+                color: $almost_black_color; 
+                transition: border-color 0.3s ease;
+                margin: 2px;
+    
+                &:hover{
+                    border-color: $dark_blue_color; 
+                }
+    
+                &:focus{
+                    border-color: $dark_green_color;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+                    outline: none; /* sterge outline ul pus by default */
+                }
+            }
+        }
+    
+        &__containers{
+            display: flex;
+            padding: 10px;
+            flex-direction: column;
+            justify-content: space-around;
+    
+            &__elem{
+                background-color: $light_pink_color; /* Light gray background */
+                color: $dark_green_color; /* Dark text color */
+                margin: 20px;
+                padding: 20px;
+                border-radius: 20px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+                position: relative;
+    
+                h2{
+                    padding: 5px 0px;
+                    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                }
+    
+                p{
+                    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    padding: 2px;
+    
+                    span{
+                        font-style: italic;
+                    }
+                }
+
+                a{
+                    text-decoration: none;
+                    color: $dark_blue_color;
+
+                    &:hover
+                    {
+                        color:$dark_green_color
                     }
                 }
     
