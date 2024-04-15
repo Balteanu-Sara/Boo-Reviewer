@@ -1301,6 +1301,26 @@ td {
   }
 }
 
+@media only screen and (max-width: 800px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2%;
+    width: 300px;
+  }
+
+  .activity-grid {
+    margin-top: 40px;
+    display: table-column;
+    grid-template-columns: 65% auto;
+    width: 300px;
+
+    .activity {
+      margin-bottom: 20px;
+    }
+  }
+}
+
 @media only screen and (max-width: 1274px) {
   .button-container__button {
     width: 40%;
