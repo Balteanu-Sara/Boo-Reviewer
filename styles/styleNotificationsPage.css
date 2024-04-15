@@ -20,7 +20,8 @@
     left: 0;
     padding: 30px 15px;
     background: rgba(29, 191, 114, 0.5);
-    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -52,8 +53,6 @@
     font-size: 14px;
     color: #efd6ac;
     text-decoration: none;
-  }
-  .sideBar__list li i a p, .sideBar__special li i a p {
     white-space: nowrap;
     display: none;
     margin-left: 10px;
@@ -67,7 +66,7 @@
   .sideBar:hover ul li i {
     margin-right: 70px;
   }
-  .sideBar:hover ul li i a p {
+  .sideBar:hover ul li i a {
     display: inline;
   }
   .wrapper {
@@ -220,7 +219,8 @@
     left: 0;
     padding: 30px 15px;
     background: rgba(29, 191, 114, 0.5);
-    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -252,8 +252,6 @@
     font-size: 14px;
     color: #efd6ac;
     text-decoration: none;
-  }
-  .sideBar__list li i a p, .sideBar__special li i a p {
     white-space: nowrap;
     display: none;
     margin-left: 10px;
@@ -267,7 +265,7 @@
   .sideBar:hover ul li i {
     margin-right: 70px;
   }
-  .sideBar:hover ul li i a p {
+  .sideBar:hover ul li i a {
     display: inline;
   }
   .wrapper {
@@ -434,7 +432,8 @@
     left: 0;
     padding: 30px 15px;
     background: rgba(29, 191, 114, 0.5);
-    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -466,8 +465,6 @@
     font-size: 14px;
     color: #efd6ac;
     text-decoration: none;
-  }
-  .sideBar__list li i a p, .sideBar__special li i a p {
     white-space: nowrap;
     display: none;
     margin-left: 10px;
@@ -481,7 +478,7 @@
   .sideBar:hover ul li i {
     margin-right: 70px;
   }
-  .sideBar:hover ul li i a p {
+  .sideBar:hover ul li i a {
     display: inline;
   }
   .wrapper {
@@ -648,7 +645,8 @@
     left: 0;
     padding: 30px 15px;
     background: rgba(29, 191, 114, 0.5);
-    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -680,8 +678,6 @@
     font-size: 14px;
     color: #efd6ac;
     text-decoration: none;
-  }
-  .sideBar__list li i a p, .sideBar__special li i a p {
     white-space: nowrap;
     display: none;
     margin-left: 10px;
@@ -695,7 +691,7 @@
   .sideBar:hover ul li i {
     margin-right: 70px;
   }
-  .sideBar:hover ul li i a p {
+  .sideBar:hover ul li i a {
     display: inline;
   }
   .wrapper {
@@ -839,6 +835,4 @@
   .wrapper__footer ul li:hover::after {
     width: 100%;
   }
-}
-
-/*# sourceMappingURL=styleNotificationsPage.css.map */
+}/*# sourceMappingURL=styleNotificationsPage.css.map */
