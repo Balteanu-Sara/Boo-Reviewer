@@ -70,12 +70,9 @@ $light_grey_color: #a39fbdb4;
                         font-size: 14px;
                         color: white;
                         text-decoration: none;
-    
-                        p{
-                            white-space: nowrap;
-                            display: none;
-                            margin-left: 10px;
-                        }
+                        white-space: nowrap;
+                        display: none;
+                        margin-left: 10px;
                     }
                 }
             }
@@ -90,7 +87,7 @@ $light_grey_color: #a39fbdb4;
                 i{
                     margin-right: 70px;
     
-                    a p{
+                    a{
                         display: inline;
                     }
                 }
@@ -169,7 +166,7 @@ $light_grey_color: #a39fbdb4;
     
             &--mod2{
     
-                button{
+                .button{
                     padding: 10px 10px;
                     background-color: #eeeeee;
                     color: $almost_black_color;
@@ -430,12 +427,9 @@ $light_grey_color: #a39fbdb4;
                         font-size: 14px;
                         color: white;
                         text-decoration: none;
-    
-                        p{
-                            white-space: nowrap;
-                            display: none;
-                            margin-left: 10px;
-                        }
+                        white-space: nowrap;
+                        display: none;
+                        margin-left: 10px;
                     }
                 }
             }
@@ -450,7 +444,7 @@ $light_grey_color: #a39fbdb4;
                 i{
                     margin-right: 70px;
     
-                    a p{
+                    a {
                         display: inline;
                     }
                 }
@@ -536,7 +530,7 @@ $light_grey_color: #a39fbdb4;
     
             &--mod2{
     
-                button{
+                .button{
                     padding: 10px 10px;
                     background-color: #eeeeee;
                     color: $almost_black_color;
@@ -798,12 +792,9 @@ $light_grey_color: #a39fbdb4;
                         font-size: 14px;
                         color: white;
                         text-decoration: none;
-    
-                        p{
-                            white-space: nowrap;
-                            display: none;
-                            margin-left: 10px;
-                        }
+                        white-space: nowrap;
+                        display: none;
+                        margin-left: 10px;
                     }
                 }
             }
@@ -818,7 +809,7 @@ $light_grey_color: #a39fbdb4;
                 i{
                     margin-right: 70px;
     
-                    a p{
+                    a {
                         display: inline;
                     }
                 }
@@ -899,7 +890,7 @@ $light_grey_color: #a39fbdb4;
     
             &--mod2{
     
-                button{
+                .button{
                     padding: 10px;
                     background-color: #eeeeee;
                     color: $almost_black_color;
@@ -1160,12 +1151,9 @@ $light_grey_color: #a39fbdb4;
                         font-size: 14px;
                         color: white;
                         text-decoration: none;
-    
-                        p{
-                            white-space: nowrap;
-                            display: none;
-                            margin-left: 10px;
-                        }
+                        white-space: nowrap;
+                        display: none;
+                        margin-left: 10px;
                     }
                 }
             }
@@ -1180,7 +1168,7 @@ $light_grey_color: #a39fbdb4;
                 i{
                     margin-right: 70px;
     
-                    a p{
+                    a {
                         display: inline;
                     }
                 }
@@ -1261,7 +1249,7 @@ $light_grey_color: #a39fbdb4;
     
             &--mod2{
     
-                button{
+                .button{
                     padding: 10px;
                     background-color: #eeeeee;
                     color: $almost_black_color;
@@ -1523,12 +1511,9 @@ $light_grey_color: #a39fbdb4;
                         font-size: 14px;
                         color: white;
                         text-decoration: none;
-    
-                        p{
-                            white-space: nowrap;
-                            display: none;
-                            margin-left: 10px;
-                        }
+                        white-space: nowrap;
+                        display: none;
+                        margin-left: 10px;
                     }
                 }
             }
@@ -1543,7 +1528,7 @@ $light_grey_color: #a39fbdb4;
                 i{
                     margin-right: 70px;
     
-                    a p{
+                    a {
                         display: inline;
                     }
                 }
@@ -1624,7 +1609,7 @@ $light_grey_color: #a39fbdb4;
     
             &--mod2{
     
-                button{
+                .button{
                     padding: 10px;
                     background-color: #eeeeee;
                     color: $almost_black_color;

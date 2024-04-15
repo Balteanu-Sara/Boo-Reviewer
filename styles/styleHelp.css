@@ -52,8 +52,6 @@
     font-size: 14px;
     color: #efd6ac;
     text-decoration: none;
-  }
-  .sideBar__listPrincipal li i a p {
     white-space: nowrap;
     display: none;
     margin-left: 10px;
@@ -78,8 +76,6 @@
     font-size: 14px;
     color: #efd6ac;
     text-decoration: none;
-  }
-  .sideBar__list li i a p, .sideBar__special li i a p {
     white-space: nowrap;
     display: none;
     margin-left: 10px;
@@ -93,7 +89,7 @@
   .sideBar:hover ul li i {
     margin-right: 70px;
   }
-  .sideBar:hover ul li i a p {
+  .sideBar:hover ul li i a {
     display: inline;
   }
   .wrapper {
@@ -154,7 +150,7 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     outline: none; /* sterge outline ul pus by default */
   }
-  .wrapper__header--mod2 button {
+  .wrapper__header--mod2 .button {
     padding: 10px 10px;
     background-color: #e8ddca;
     color: #04151f;
@@ -164,19 +160,19 @@
     border: 0.5px solid #ddd;
     margin: 2px;
   }
-  .wrapper__header--mod2 button:hover {
+  .wrapper__header--mod2 .button:hover {
     background-color: rgba(29, 191, 114, 0.7);
     color: #f44336;
     border-color: rgba(29, 191, 114, 0.7);
   }
-  .wrapper__header--mod2 button a {
+  .wrapper__header--mod2 .button a {
     text-decoration: none;
     color: black;
   }
-  .wrapper__header--mod2 button a p {
+  .wrapper__header--mod2 .button a p {
     font-size: small;
   }
-  .wrapper__header--mod2 button a:hover {
+  .wrapper__header--mod2 .button a:hover {
     background-color: rgba(29, 191, 114, 0.7);
     color: #f44336;
     border-color: rgba(29, 191, 114, 0.7);
@@ -310,6 +306,30 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     outline: none; /* sterge outline ul pus by default */
   }
+  .wrapperPrincipal__header .button {
+    padding: 10px 20px;
+    background-color: #e8ddca;
+    color: #04151f;
+    cursor: pointer;
+    width: 150px;
+    border-radius: 10px;
+    border: 0.5px solid #ddd;
+    margin: 2px;
+  }
+  .wrapperPrincipal__header .button:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperPrincipal__header .button a {
+    text-decoration: none;
+    color: black;
+  }
+  .wrapperPrincipal__header .button a:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
   .wrapperPrincipal__containers {
     display: flex;
     padding: 10px;
@@ -437,8 +457,6 @@
     font-size: 14px;
     color: #efd6ac;
     text-decoration: none;
-  }
-  .sideBar__listPrinical li i a p {
     white-space: nowrap;
     display: none;
     margin-left: 10px;
@@ -463,8 +481,6 @@
     font-size: 14px;
     color: #efd6ac;
     text-decoration: none;
-  }
-  .sideBar__list li i a p, .sideBar__special li i a p {
     white-space: nowrap;
     display: none;
     margin-left: 10px;
@@ -478,7 +494,7 @@
   .sideBar:hover ul li i {
     margin-right: 70px;
   }
-  .sideBar:hover ul li i a p {
+  .sideBar:hover ul li i a {
     display: inline;
   }
   .wrapper {
@@ -541,7 +557,7 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     outline: none; /* sterge outline ul pus by default */
   }
-  .wrapper__header--mod2 button {
+  .wrapper__header--mod2 .button {
     padding: 10px;
     background-color: #e8ddca;
     color: #04151f;
@@ -551,19 +567,19 @@
     border: 0.5px solid #ddd;
     margin: 2px;
   }
-  .wrapper__header--mod2 button:hover {
+  .wrapper__header--mod2 .button:hover {
     background-color: rgba(29, 191, 114, 0.7);
     color: #f44336;
     border-color: rgba(29, 191, 114, 0.7);
   }
-  .wrapper__header--mod2 button a {
+  .wrapper__header--mod2 .button a {
     text-decoration: none;
     color: black;
   }
-  .wrapper__header--mod2 button a p {
+  .wrapper__header--mod2 .button a p {
     font-size: small;
   }
-  .wrapper__header--mod2 button a:hover {
+  .wrapper__header--mod2 .button a:hover {
     background-color: rgba(29, 191, 114, 0.7);
     color: #f44336;
     border-color: rgba(29, 191, 114, 0.7);
@@ -699,6 +715,30 @@
     border-color: #183a37;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     outline: none; /* sterge outline ul pus by default */
+  }
+  .wrapperPrincipal__header .button {
+    padding: 10px 20px;
+    background-color: #e8ddca;
+    color: #04151f;
+    cursor: pointer;
+    width: 100px;
+    border-radius: 10px;
+    border: 0.5px solid #ddd;
+    margin: 2px;
+  }
+  .wrapperPrincipal__header .button:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperPrincipal__header .button a {
+    text-decoration: none;
+    color: black;
+  }
+  .wrapperPrincipal__header .button a:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
   }
   .wrapperPrincipal__containers {
     display: flex;
@@ -827,8 +867,6 @@
     font-size: 14px;
     color: #efd6ac;
     text-decoration: none;
-  }
-  .sideBar__listPrincipal li i a p {
     white-space: nowrap;
     display: none;
     margin-left: 10px;
@@ -853,8 +891,6 @@
     font-size: 14px;
     color: #efd6ac;
     text-decoration: none;
-  }
-  .sideBar__list li i a p, .sideBar__special li i a p {
     white-space: nowrap;
     display: none;
     margin-left: 10px;
@@ -868,7 +904,7 @@
   .sideBar:hover ul li i {
     margin-right: 70px;
   }
-  .sideBar:hover ul li i a p {
+  .sideBar:hover ul li i a {
     display: inline;
   }
   .wrapper {
@@ -931,7 +967,7 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     outline: none; /* sterge outline ul pus by default */
   }
-  .wrapper__header--mod2 button {
+  .wrapper__header--mod2 .button {
     padding: 10px;
     background-color: #e8ddca;
     color: #04151f;
@@ -941,19 +977,19 @@
     border: 0.5px solid #ddd;
     margin: 2px;
   }
-  .wrapper__header--mod2 button:hover {
+  .wrapper__header--mod2 .button:hover {
     background-color: rgba(29, 191, 114, 0.7);
     color: #f44336;
     border-color: rgba(29, 191, 114, 0.7);
   }
-  .wrapper__header--mod2 button a {
+  .wrapper__header--mod2 .button a {
     text-decoration: none;
     color: black;
   }
-  .wrapper__header--mod2 button a p {
+  .wrapper__header--mod2 .button a p {
     font-size: x-small;
   }
-  .wrapper__header--mod2 button a:hover {
+  .wrapper__header--mod2 .button a:hover {
     background-color: rgba(29, 191, 114, 0.7);
     color: #f44336;
     border-color: rgba(29, 191, 114, 0.7);
@@ -1089,6 +1125,30 @@
     border-color: #183a37;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     outline: none; /* sterge outline ul pus by default */
+  }
+  .wrapperPrincipal__header .button {
+    padding: 10px 20px;
+    background-color: #e8ddca;
+    color: #04151f;
+    cursor: pointer;
+    width: 100px;
+    border-radius: 10px;
+    border: 0.5px solid #ddd;
+    margin: 2px;
+  }
+  .wrapperPrincipal__header .button:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperPrincipal__header .button a {
+    text-decoration: none;
+    color: black;
+  }
+  .wrapperPrincipal__header .button a:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
   }
   .wrapperPrincipal__containers {
     display: flex;
@@ -1217,8 +1277,6 @@
     font-size: 14px;
     color: #efd6ac;
     text-decoration: none;
-  }
-  .sideBar__listPrincipal li i a p {
     white-space: nowrap;
     display: none;
     margin-left: 10px;
@@ -1243,8 +1301,6 @@
     font-size: 14px;
     color: #efd6ac;
     text-decoration: none;
-  }
-  .sideBar__list li i a p, .sideBar__special li i a p {
     white-space: nowrap;
     display: none;
     margin-left: 10px;
@@ -1258,7 +1314,7 @@
   .sideBar:hover ul li i {
     margin-right: 70px;
   }
-  .sideBar:hover ul li i a p {
+  .sideBar:hover ul li i a {
     display: inline;
   }
   .wrapper {
@@ -1321,7 +1377,7 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     outline: none; /* sterge outline ul pus by default */
   }
-  .wrapper__header--mod2 button {
+  .wrapper__header--mod2 .button {
     padding: 10px;
     background-color: #e8ddca;
     color: #04151f;
@@ -1331,19 +1387,19 @@
     border: 0.5px solid #ddd;
     margin: 2px;
   }
-  .wrapper__header--mod2 button:hover {
+  .wrapper__header--mod2 .button:hover {
     background-color: rgba(29, 191, 114, 0.7);
     color: #f44336;
     border-color: rgba(29, 191, 114, 0.7);
   }
-  .wrapper__header--mod2 button a {
+  .wrapper__header--mod2 .button a {
     text-decoration: none;
     color: black;
   }
-  .wrapper__header--mod2 button a p {
+  .wrapper__header--mod2 .button a p {
     font-size: x-small;
   }
-  .wrapper__header--mod2 button a:hover {
+  .wrapper__header--mod2 .button a:hover {
     background-color: rgba(29, 191, 114, 0.7);
     color: #f44336;
     border-color: rgba(29, 191, 114, 0.7);
@@ -1479,6 +1535,30 @@
     border-color: #183a37;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     outline: none; /* sterge outline ul pus by default */
+  }
+  .wrapperPrincipal__header .button {
+    padding: 10px 20px;
+    background-color: #e8ddca;
+    color: #04151f;
+    cursor: pointer;
+    width: 100px;
+    border-radius: 10px;
+    border: 0.5px solid #ddd;
+    margin: 2px;
+  }
+  .wrapperPrincipal__header .button:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
+  }
+  .wrapperPrincipal__header .button a {
+    text-decoration: none;
+    color: black;
+  }
+  .wrapperPrincipal__header .button a:hover {
+    background-color: rgba(29, 191, 114, 0.7);
+    color: #f44336;
+    border-color: rgba(29, 191, 114, 0.7);
   }
   .wrapperPrincipal__containers {
     display: flex;
