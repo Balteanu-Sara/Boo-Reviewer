@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -195,6 +196,7 @@ body {
 }
 
 .second-body {
+  min-height: 100vh;
   width: 100%;
   background: rgb(255, 255, 255);
   background-position: center;
@@ -205,6 +207,7 @@ body {
 
 .second-main {
   width: 70%;
+  height: 90vh;
   padding: 10px;
   margin-left: 230px;
   display: flex;
@@ -538,6 +541,7 @@ body {
 .myBooks-table {
   width: 100%;
   border-collapse: collapse;
+  /* Stilurile pentru textul "See More" */
 }
 .myBooks-table__row {
   text-align: center;
@@ -549,8 +553,43 @@ body {
   color: #c23212;
   border-bottom: 3px solid #c23212; /* Add bottom border to each row */
 }
+.myBooks-table__cover {
+  position: relative;
+  display: inline-block;
+}
 .myBooks-table__cover--img {
   width: 170px;
+}
+.myBooks-table .overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: -10px;
+  bottom: -10px;
+  width: 90%;
+  height: 90%;
+  background-color: rgba(218, 109, 54, 0.5); /* Culoarea stratului colorat */
+  opacity: 0; /* Inițial, stratul este invizibil */
+  transition: opacity 0.3s ease; /* Efect de tranziție la schimbarea opacității */
+}
+.myBooks-table .overlay h4 {
+  width: 100%;
+  font-weight: 500;
+  color: #fff;
+  font-size: 30px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+.myBooks-table .overlay:hover {
+  opacity: 1; /* La trecerea cursorului peste imagine, stratul devine vizibil */
+}
+.myBooks-table .overlay:hover h4 {
+  bottom: 50%;
+  opacity: 1;
 }
 .myBooks-table__title, .myBooks-table__author {
   font-size: 17px;
@@ -626,9 +665,11 @@ body {
     margin-left: 70px;
     overflow-x: hidden;
     height: 120vh;
+    padding-right: 50px;
   }
   .second-main {
     margin-left: 100px;
+    padding-right: 50px;
   }
   .second-main .header-profile {
     margin-top: 0;
@@ -707,6 +748,13 @@ body {
   .myBooks-table__cover--img {
     width: 80px;
   }
+  .myBooks-table .overlay {
+    width: 80%;
+    height: 80%;
+  }
+  .myBooks-table .overlay h4 {
+    font-size: 100%;
+  }
   .myBooks-table__title, .myBooks-table__author {
     font-size: 60%;
   }
@@ -723,4 +771,56 @@ body {
   .button {
     padding: 9px 18px;
   }
+}
+.community-container {
+  width: 100%;
+  height: 80vh;
+}
+.community-container__title {
+  text-align: center;
+  padding-top: 10%;
+  margin-bottom: 60px;
+  font-weight: 600;
+  position: relative;
+}
+.community-container__title::after {
+  content: "";
+  background: #c23212;
+  width: 210px;
+  height: 5px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.community-container__row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+.community-container__group {
+  text-align: center;
+  padding: 25px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  background: transparent;
+  transition: 0.5s;
+}
+.community-container__group i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #2a956a;
+}
+.community-container__group h2 {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.community-container__group:hover {
+  background: rgba(24, 130, 86, 0.6705882353);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+.community-container__group:hover i {
+  color: #df5738;
 }/*# sourceMappingURL=style.css.map */
