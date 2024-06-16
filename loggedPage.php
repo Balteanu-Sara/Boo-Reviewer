@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script
+      src="https://kit.fontawesome.com/7caa4bdb6b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles/styleLoggedPage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Logged Page</title>
+  </head>
+
+  <body class="background">
+    <div class="sideBar">
+      <div class="sideBar__image">
+        <img
+          src="styles/images/logouri/logo-color.png"
+          alt="Boo Logo"
+          class="sideBar__image--mod"
+        />
+      </div>
+      <ul class="sideBar__list">
+        <li>
+          <i class="fa fa-home fa-lg" aria-hidden="true"
+            ><a href="loggedPage.php" class="simple-text">Home</a></i
+          >
+        </li>
+        <li>
+          <i class="fa fa-book fa-lg" aria-hidden="true"
+            ><a href="myBooks.php" class="simple-text">My books</a></i
+          >
+        </li>
+        <li>
+          <i class="fa fa-users fa-lg" aria-hidden="true"
+            ><a href="communityPage.php" class="simple-text">Community</a></i
+          >
+        </li>
+        <li>
+          <i class="fa fa-pie-chart fa-lg" aria-hidden="true"
+            ><a href="newsPage.php" class="simple-text">News</a></i
+          >
+        </li>
+      </ul>
+
+      <ul class="sideBar__special">
+        <li>
+          <i class="fa fa-arrow-right-from-bracket fa-lg"
+            ><a href="#" id="logoutButton" class="simple-text">Sign Out</a></i
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="wrapper">
+      <div class="wrapper__header">
+        <div class="wrapper__header--mod1">
+          <button type="button">
+            <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+          </button>
+          <input type="text" id="searchInput" placeholder="Search..." />
+        </div>
+
+        <div class="wrapper__header--mod2">
+          <div class="button">
+            <i class="fa fa-user fa-lg"></i>
+            <a href="profilePage.php">Profile</a>
+          </div>
+          <div class="button">
+            <i class="fa fa-envelope fa-lg"></i>
+            <a href="notificationsPage.php">Notifications</a>
+          </div>
+          <div class="button">
+            <i class="fa fa-heart fa-lg"></i>
+            <a href="friendsPage.php">Friends</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper__containers">
+        <div class="wrapper__containers__elem">
+          <h2>Recommendations</h2>
+          <p>
+            <span>Top Picks:</span> Here, we've gathered the most captivating
+            books of the moment. From epic fantasy adventures to poignant
+            dramas, these are the works you shouldn't miss out on.
+          </p>
+          <p>
+            <span>Recent Discoveries:</span> Explore fresh, newly released
+            books. From talented debut authors to established writers, you'll
+            find a variety of genres and styles here.
+          </p>
+          <p>
+            <span>Thematic Collections:</span> If you're passionate about a
+            specific subject, here you'll find books grouped by themes such as
+            love, mystery, travel, or history.
+          </p>
+          <p>
+            <span>Personalized Recommendations:</span> Browse books selected
+            specifically for you based on your previous preferences. You might
+            discover a new favorite book!
+          </p>
+          <p>
+            <span>Reviews and Ratings:</span> Each recommendation is accompanied
+            by a brief review and rating. Find out what others have said about
+            these books and decide if they're right for you.
+          </p>
+        </div>
+
+        <div class="wrapper__containers__elem">
+          <h2>Categories</h2>
+          <ol>
+            <li>
+              <span>Novels and Fiction:</span> Captivating novels, intriguing
+              stories, and adventures in fictional worlds are always popular.
+              You can peek anything from classic literature to contemporary
+              novels.
+            </li>
+            <li>
+              <span>Detective and Thriller Books:</span> Mystery, suspense, and
+              riveting investigations are the hallmarks of this genre. From
+              intricate whodunits to pulse-pounding thrillers, detective and
+              thriller books offer an immersive escape into the world of
+              crime-solving and adrenaline-fueled suspense. Whether you enjoy
+              piecing together clues alongside a brilliant detective or being
+              kept on the edge of your seat by heart-stopping plot twists, these
+              books promise to keep you guessing until the very end.
+            </li>
+            <li>
+              Transporting readers to fantastical realms and futuristic worlds,
+              fantasy and science fiction novels ignite the imagination with
+              magic, technology, and epic adventures. Whether you're longing to
+              explore mythical kingdoms or embark on intergalactic journeys
+              through the cosmos, these genres offer limitless opportunities for
+              escapism and discovery.
+            </li>
+            <li>
+              <span>Personal Development:</span> Empowering and enlightening,
+              personal development books serve as catalysts for growth,
+              inspiring readers to unlock their full potential and embrace
+              positive change. From strategies for self-improvement to practices
+              for mindfulness and success, these books offer valuable insights
+              and practical guidance to help you navigate life's challenges and
+              achieve your goals.
+            </li>
+            <li>
+              <span>Poetry and Classical Literature:</span> Celebrating the
+              beauty of language and the power of expression, poetry and
+              classical literature resonate with readers through timeless verses
+              and enduring themes. From sonnets to epics, these works offer
+              profound insights into the human condition and evoke a range of
+              emotions with their lyrical language and evocative imagery.
+            </li>
+          </ol>
+        </div>
+
+        <div class="wrapper__containers__elem">
+          <h2>News</h2>
+          <p>"Other 52 Oddities" by Doina Ruști</p>
+          <p>"My Life in Morisaki's Bookstore" by Satoshi Yagisawa</p>
+          <p>"The Era of Vice" by Deepti Kapoor</p>
+          <p>"Go as a River" by Shelley Read</p>
+          <p>"Malefica" by Beatrice Salvioni</p>
+          <p>"Can't Hurt Me" by David Goggins</p>
+          <p>"ATLAS: The Story of Pa Salt" by Lucinda Riley</p>
+          <strong
+            >If you're looking for captivating reads, these books might pique
+            your interest.</strong
+          >
+        </div>
+
+        <div class="wrapper__containers__elem">
+          <h2>About us!</h2>
+          <p>
+            Welcome to Boo! We are a community passionate about books and
+            reading, dedicated to sharing opinions, annotations, and literary
+            experiences. Here's what you can find in the About Us section of our
+            website:
+          </p>
+          <p>
+            <span>Our Mission</span> We are here to help you discover the most
+            captivating books and share your own impressions. We strive to
+            provide a platform where readers can communicate, learn, and explore
+            the fascinating world of literature.
+          </p>
+          <p>
+            <span>Our Platform</span> Through our web application, you can
+            manage your progress in reading, annotate your favorite books, and
+            organize them based on various criteria. From categories and authors
+            to publishers and links to other books, we are here to help you keep
+            your virtual library in order.
+          </p>
+          <a href="aboutUsLogged.php">Read more...</a>
+        </div>
+      </div>
+
+      <div class="wrapper__footer">
+        <ul>
+          <li><a href="">Terms of Service</a></li>
+          <li><a href="">Privacy</a></li>
+          <li><a href="helpLogged.php">Help</a></li>
+        </ul>
+      </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            // Adaugă un eveniment de clic pentru link-ul de "Sign Out"
+            $('#logoutButton').on('click', function(e) {
+                e.preventDefault(); // Previne comportamentul implicit de navigare
+
+                // Trimite o cerere AJAX către logout.php
+                $.ajax({
+                    url: 'php/logout.php',
+                    type: 'POST',
+                    data: { logout: true },
+                    dataType: 'json',
+                    success: function(response) {
+                        // Redirecționează utilizatorul după delogare (în caz de succes)
+                        if (response.success) {
+                            window.location.href = 'principalPage.php';
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        // Poți trata aici erorile în caz că ceva nu merge bine cu cererea AJAX
+                        console.error('Error:', error);
+                    }
+                });
+            });
+        });
+    </script>
+  </body>
+</html>

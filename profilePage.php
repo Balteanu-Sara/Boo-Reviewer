@@ -1,0 +1,151 @@
+<?php
+session_start();
+include("php/config.php"); // Aici includi fișierul de configurare al bazei de date
+
+if (!isset($_SESSION['user_id'])) {
+  // Dacă nu este autentificat, redirecționează către pagina de autentificare sau altă pagină relevantă
+  header("Location: signIn.php");
+  exit;
+}
+
+// Afișează informațiile utilizatorului din sesiune
+$user_id = $_SESSION['user_id'];
+$username = $_SESSION['username'];
+$email = $_SESSION['email'];
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>My Profile</title>
+  </head>
+  <body class="second-body">
+
+    <header class="second-header">
+      <div class="sideBar">
+        <div class="sideBar__image">
+          <img
+            src="styles/images/logouri/logo-black.png"
+            class="sideBar__image--mod"
+            alt="Boo Logo"
+          />
+        </div>
+        <ul class="sideBar__list">
+          <li>
+            <i class="fa fa-home fa-lg" aria-hidden="true"
+              ><a href="loggedPage.php" class="simple-text">Home</a></i
+            >
+          </li>
+          <li>
+            <i class="fa fa-book fa-lg" aria-hidden="true"
+              ><a href="myBooks.php" class="simple-text">My books</a></i
+            >
+          </li>
+          <li>
+            <i class="fa fa-users fa-lg" aria-hidden="true"
+              ><a href="communityPage.php" class="simple-text">Community</a></i
+            >
+          </li>
+          <li>
+            <i class="fa fa-pie-chart fa-lg" aria-hidden="true"
+              ><a href="newsPage.php" class="simple-text">News</a></i
+            >
+          </li>
+        </ul>
+
+        <ul class="sideBar__special fa-lg">
+          <li>
+            <i class="fa fa-sign-out"
+              ><a href="principalPage.php" class="simple-text">Sign Out</a></i
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="wrapper">
+        <div class="wrapper__header">
+          <div class="wrapper__header--mod1">
+            <button type="button">
+              <i class="fa fa-search fa-lg"></i>
+            </button>
+            <input type="text" id="searchInput" placeholder="Search..." />
+          </div>
+
+          <div class="wrapper__header--mod2">
+            <div class="button">
+              <i class="fa fa-user fa-lg"></i>
+              <a href="profilePage.php">Profile</a>
+            </div>
+            <div class="button">
+              <i class="fa fa-envelope fa-lg"></i>
+              <a href="notificationsPage.php">Notifications</a>
+            </div>
+            <div class="button">
+              <i class="fa fa-heart fa-lg"></i>
+              <a href="friendsPage.php">Friends</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="second-main">
+      <div class="header-profile">
+        <h2 class="header-profile__title">My Profile</h2>
+      </div>
+      <div class="user-container1">
+        <div class="user-container1__profile-pic">
+          <i class="fa fa-picture-o" aria-hidden="true"></i>
+        </div>
+        <h3 class="user-container1__username"><?php echo $username; ?></h3>
+        <div class="user-container1--edit-button">
+          <button class="user-container1--edit-button__mod">
+            Edit <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <div class="user-container2">
+        <h2 class="user-container2__info">Personal Information</h2>
+        <div class="user-container2__line"></div>
+        <div class="user-container2--edit-button">
+          <button class="user-container2--edit-button__mod">
+            Edit <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="user-container2--user-data">
+        <h4>Username</h4>
+                <p><?php echo $username; ?></p>
+                <h4>Email Address</h4>
+                <p><?php echo $email; ?></p>
+        </div>
+      </div>
+    </main>
+    <footer class="second-footer">
+      <div class="second-footer__links">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="" class="footer__link">Terms of Service</a>
+          </li>
+          <li class="footer__item">
+            <a href="" class="footer__link">Privacy</a>
+          </li>
+          <li class="footer__item">
+            <a href="helpLogged.php" class="footer__link">Help</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
