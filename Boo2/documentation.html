@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Book Reviewer Scholarly HTML Report</title>
+
+    <link rel="stylesheet" href="https://w3c.github.io/scholarly-html/css/scholarly.min.css">
+    <script src="https://w3c.github.io/scholarly-html/js/scholarly.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="banner">
+    </div>
+    <h1><project>Book Reviewer</project> Raport - Scholarly HTML</h1>
+</header>
+
+<div role="contentinfo">
+    <dl>
+        <dt>Authors</dt>
+        <dd>
+            <a href="https://github.com/sarabalteanu" target="_blank">Balteanu Sara</a>,
+            <a href="https://github.com/biiianca" target="_blank">Chilariu Bianca</a>
+        </dd>
+    </dl>
+</div>
+<section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+    <h2>Abstract</h2>
+    <p>
+        Acest document cuprinde aspectele tehnice si interactiunea cu utilizatorul, ale proiectului Book Reviewer pentru
+        <web>Tehnologii Web</web>, realizat in coloborare de
+        <a href="https://github.com/sarabalteanu">Balteanu Sara</a> si
+        <a href="https://github.com/biiianca">Chilariu Bianca</a> pentru Tehnologii Web (2024).
+        <br>
+        <br>
+        <infoiasi><i>Universitatea Alexandru Ioan Cuza din Iasi, Facultatea de Informatica</i></infoiasi>
+    </p>
+</section>
+<!--1.Introduction-->
+<section id="introduction" role="doc-introduction">
+    <h2>Introducere</h2>
+    <section id="purpose">
+        <!-- review? -->
+        <h3>Scop</h3>
+        <p>
+            Aplicatia Web Book Reviewer, detaliata in acest document, creeaza un spatiu pentru utilizator ce 
+            permite specificarea progresului si exprimarea opiniilor/adnotarilor referitoare la lecturile realizate 
+            de o persoana sau grup de persoane (e.g., o clasa de elevi, un club).
+        </p>
+    </section>
+
+    <section id="intended-audience">
+        <h3>Public ținta</h3>
+        <p>
+            Vom prezenta o descriere generala a aplicatiei, urmand ca apoi sa fie detaliata
+            interactiunea utlizatorului cu aceasta. Acest document se adreseaza in principal utilizatorului obisnuit,
+            si vizeaza in special principalele functionalitati ale aplicatiei si modul de interactiune cu utlizatorul,
+            pentru a facilita utilizarea aplicatiei.
+        </p>
+    </section>
+    <section id="scope">
+        <h3>Viziune</h3>
+        <p>
+            Aplicatia doreste sa usureze efortul depus de utilizator pentru a posta public opiniile sale
+            asupra cartilor citite, prin gruparea acestora dupa preferintele stabilite de utilizator si 
+            prin usoara genstionare a acestor preferinte.  De asemenea sunt puse la dispozitie statistici 
+            pentru a avea o perspectiva mai clara asupra cartilor recenzate.
+        </p>
+    </section>
+</section>
+
+<!-- 2. Description -->
+<section id="description" role="doc-introduction">
+    <h2>Descriere</h2>
+    <section id="perspective">
+        <h3>Perspectiva</h3>
+        <p>
+            Aplicatia ofera posibilitatea utilizatorilor de a impartasi recenziile lor asupra cartilor
+            selectate, iar orice alt utilizator poate interactiona cu acestea ulterior.
+        </p>
+    </section>
+
+    <section id="functions">
+        <h3>Functiile Produsului</h3>
+        <p>
+            Mai jos sunt functionalitatile pe care aplicatia Book Reviewer le ofera.
+        <ul>
+            <li>Crearea unui cont si inregistrarea unui utilizator</li>
+            <li>Selecatarea cartilor ce pot fi adaugate in prorpia colectie</li>
+            <li>Alegerea topicelor preferate</li>
+            <li>Publicarea si compunerea unei recenzii</li>
+            <li>Notificari asupra activitatilor prietenilor si cererilor de prietenie</li>
+            <li>Vizualizarea unor articole de actualitate</li>
+            <li>Participarea la mai multe comunitati</li>
+        </ul>
+        </p>
+    </section>
+
+    <section id="functions">
+        <h3>Constrangeri</h3>
+        <p>
+            Accesarea feed-urilor RSS pentru a viziona diverse stiri si recomandari de carti
+            este dependenta de folosirea constanta ale surselor RSS. Daca acestea isi schimba 
+            structura sau nu vor mai fi available, Book Reviewer va intampina erori în 
+            afisarea continutului. 
+        </p>
+        <p>
+            Alt aspect ce trebuie imbunatatit, este performanta aplicatiei ce poate fi afectata de
+            numarul de useri simultani si de cantatiatea datelor procesate. Este important ca 
+            partea de backend sa fie optimizata pentru a nu exista compromiteri in oferirea unui 
+            output corespunzator la cererile utilizatorului.
+        </p>
+    </section>
+</section>
+
+<!--3.External Interface Requirements-->
+<section id="interfaces">
+    <h2>Interfete externe</h2>
+    <section id="user-interfaces">
+        <h3>Interfata pentru utlizator</h3>
+        <p>
+            Aplicatia ofera o interfata moderna, placuta din punct de vedere vizual pentru a imbunatati
+            experienta utilizatorului. Book Reviewer poate fi folosita atat pe ecrane mari cat si pe browserul
+            tabletei al carui ecran este de dimensiuni mai reduse (landscape/portrait), oferind in continuare o experienta
+            placuta datorita design-ului responsive.
+        </p>
+        <p>
+            De asemenea, utilizatorul are posibilitatea de a isi vizualiza datele personale pe care le introduce
+            in aplicatie la crearea contului. Acest lucru este posibil prin pagina "Profile" la care se poate ajunge cu usurinta de oriunde din aplicatie.
+        </p>
+    </section>
+
+    <section id="software-interfaces">
+        <h3>Interfete software</h3>
+        <p>
+            Aplicatia Book Reviewer este integrata cu diverse surse de date pentru a facilita userilor 
+            informatii despre carti si stiri literare. Se colecteaza date de la website-uri precum Goodreads 
+            si Book Browse, incluzand feed-uri RSS actuale.
+        </p>
+        <p>
+            Pentru o buna gestionare a bazei de date se utilizeaza MySQL, care dispune de flexibilitate si o capacitate
+            sugestiva pentru integrarea fezabila cu limbajele de programare folosite pentru partea de backend. 
+        </p>
+        <p>
+            Design-ul arhitectural al aplicatiei: 
+            Codul sursa este impartit in mai multe foldere, fiecare avand un rol specific. Codul PHP, responsabil pentru logica serverului si interactiunea cu baza de date, este grupat intr-un folder dedicat (php). Codul JavaScript, care gestioneaza interactivitatea si functiile de front-end, este plasat intr-un alt folder separat. Fisierele CSS si SCSS, care se ocupa de aspectul vizual al aplicatiei, sunt organizate intr-un folder propriu. In folderul principal, se gasesc toate paginile HTML, oferind o structura centrala si accesibila pentru toate componentele interfetei.
+        </p>
+        <p>
+            Frontend-ul este scris în HTML, SASS si JavaScript, fara a folosi alte librarii. Pentru o experienta
+            mai placuta, Book Reviewer foloseste fontul Poppins oferit de Google Fonts impreun cu pachetul de iconite
+            Font Awesome. De asemenea, aplicatia este responsive, asigurand consistenta pe diferite dimensiuni de ecran
+            si dispozitive.
+        </p>
+        <p>
+            Pentru backend se foloseste PHP, care gestioneaza interactiunile cu baza de date si logica aplicatiei.
+            PHP este ales pentru flexibilitatea si compatibilitatea sa diversa cu servicii de hosting si baze de date. 
+            De asemenea, se folosesc functii PHP pentru manipularea datelor si generarea dinamica a continutului paginilor web.
+        </p>
+    </section>
+
+    <section id="communication-interfaces">
+        <h3>Interfete de comunicare</h3>
+        <p>
+            Interfetele de comunicare ale proiectului implica utilizarea unor tehnologii pentru a facilita interactiunea intre client si server. Modul in care sunt gestionate aceste interfete in proiect:
+            <ul>
+                <li>
+                    Front-end (JavaScript, AJAX, JSON): Front-end-ul aplicatiei utilizeaza JavaScript pentru a interactiona dinamic cu utilizatorul si pentru a face cereri catre serverul back-end folosind AJAX. Acest lucru permite incarcarea dinamica a continutului pe pagina fara a necesita reincarcarea completa a paginii.
+                </li>
+                <li>
+                    Back-end (PHP / MySQL): Back-end-ul este realizat in PHP, cu gestionarea bazelor de date MySQL folosind PDO pentru a asigura securitate si gestionarea eficienta a conexiunilor la baza de date. Serverul PHP proceseaza cererile HTTP primite de la front-end, executa interogarile SQL necesare pentru a extrage si a manipula datele din baza de date si returneaza raspunsuri in format JSON catre client.
+                </li>
+                <li>
+                    Comunicare intre module: Front-end-ul comunica cu back-end-ul prin intermediul cererilor AJAX. Front-end-ul face cereri HTTP (GET si POST) la diverse endpoint-uri definite in PHP, transmitand si receptionand date in format JSON. De exemplu, incarcarea informatiilor despre un grup de cititori se face prin trimiterea unui GET request catre getClubInfo.php, care returneaza datele sub forma de JSON pentru a fi afisate pe pagina web.
+                </li>
+                <li>
+                    Securitate: Securitatea este asigurata prin autentificare si autorizare. In codul PHP, sunt utilizate sesiuni pentru a mentine starea de autentificare a utilizatorului ($_SESSION['user_id']). Acest lucru previne accesul neautorizat la informatiile personale ale utilizatorului si alte date sensibile.
+                </li>
+                <li>
+                    Optimizare si performanta: Pentru a asigura o experienta rapida si eficienta utilizatorilor, se utilizeaza caching in front-end (de exemplu, lista cu cele mai citite carti este afisata dinamic), iar in back-end se optimizeaza interogarile SQL pentru a minimiza timpul de raspuns al serverului.
+                </li>
+            </ul>
+        </p>
+        <p>
+            Aplicatia foloseste metodele HTTP standard cum ar fi GET si POST pentru a comunica intre client (front-end) si server (back-end). De exemplu, cererile AJAX catre getClubInfo.php si sendFriendRequest.php sunt efectuate cu GET si POST, respectiv.
+        </p>
+        <p>
+            Aplicatia defineste resurse (de exemplu, informatii despre grupuri de cititori, informatii despre carti) care sunt accesate prin endpoint-uri specifice. Endpoint-urile sunt URI-uri precum http://localhost/Boo2/php/getClubInfo.php si http://localhost/Boo2/php/sendFriendRequest.php, care reprezinta resursele manipulate prin API.
+        </p>
+        <p>
+            Datele sunt transferate intre client si server in format JSON, care este un format de reprezentare a resurselor, pentru a permite interoperabilitatea si usurinta de utilizare, specific API-urilor RESTful. De asemenea sunt utilizate coduri de stare HTTP precum 200 (OK), 400 (Bad Request), 403 (Forbidden), etc., pentru a comunica rezultatul operatiunilor si pentru a indica starea cererilor efectuate de client.
+        </p>
+    </section>
+
+    <section id="statistics-api">
+        <h3>Interfata pentru statistici</h3>
+        <p>
+            Se va face o cerere fetch cstre getUserBooks.php, care returneaza o lista de carti in format JSON. Daca cererea are succes, datele cartilor sunt utilizate pentru a popula tabelul cu colectia de carti ale utilizatorului. Fiecare carte are optiuni pentru actualizarea statusului (Read, Reading, Want to Read). Utilizatorul poate schimba statusul unei carti, iar aceasta actiune declanseaza o cerere fetch de tip POST catre updateBookProgress.php, cu datele corespunzatoare cartii si noul status.
+        </p>
+        <p>
+            Efectueaza o cerere fetch catre get_stats.php, care returneaza statistici despre utilizator (totalul cartilor adaugate in colectie si progresul total, adica cate carti a terminat de citit). Functia populateUserStatistics foloseste datele returnate pentru a actualiza elementele HTML corespunzatoare cu valorile statistice.
+        </p>
+        <h4>Export CSV</h4>
+        <p>
+            De asemenea, in aceasta pagina exista un buton de export CSV, ce efectueaza o cerere catre export_csv.php, care genereaza si trimite un fisier CSV continand informatiile cartilor utilizatorului. Se fac interogari SQL in export_csv.php, astfel se selecteaza detaliile cartilor si recenziile acestora.
+        </p>
+        <h4>Export DocBook</h4>
+        <p>
+            Similar, butonul de export DocBook trimite o cerere catre export_docbook.php, care genereaza un fisier XML in format DocBook cu informatiile cartilor utilizatorului. Interogarile la baza de date utilizate sunt similare cu cele din export_csv.php, dar formatul de iesire este XML.
+        </p>
+    </section>
+    
+</section>
+
+<section id="source-code">
+    <h2>Gestionarea Codului</h2>
+    <p>
+        Pentru gestionarea eficienta a codului si a colaborarii, am folosit GitHub. Aceasta platforma ne-a permis sa lucram simultan la diferite functionalitati ale proiectului, sa urmarim modificarile si sa integram intr-un final componentele proiectului.
+    </p>
+    <p>
+        Codul sursa al proiectului este disponibil <a href="https://github.com/Balteanu-Sara/WEB-proiect.git" target="_blank">aici</a>.
+    </p>
+</section>
+
+<section id="securitate">
+    <h2>Securitate</h2>
+    <p>
+        Aplicatia prezinta mai multe masuri de securitate pentru protejarea datelor utilizatorilor si prevenirea atacurilor potentiale. Codul foloseste prepared statements pentru a preveni atacurile de tip SQL injection. Aceasta tehnica este implementata prin metodele prepare si bindParam din PDO, care asigura ca datele introduse de utilizator nu sunt direct inserate in interogarile SQL. <br> In plus, se furnizeaza coduri de eroare atunci cand parametrii necesari nu sunt furnizati sau anumite date specifice nu sunt gasite in baza de date. Aceasta abordare asigura un raspuns consistent si informativ din partea API-ului. Aplicatia foloseste o clasa separata pentru gestionarea conexiunii la baza de date, centralizand astfel configuratiile si imbunatatind modularitatea si mentenabilitatea codului. 
+    </p>
+    <p>
+        In ceea ce priveste crearea conturilor, aplicatia verifica daca toate campurile necesare sunt completate si daca parolele introduse coincid. Parolele sunt ulterior hash-uite folosind password_hash inainte de a fi stocate in baza de date, asigurand astfel ca parolele utilizatorilor sunt protejate chiar daca baza de date este compromisa. De asemenea, datele de intrare sunt sanitizate folosind functiile htmlspecialchars si strip_tags pentru a elimina caracterele speciale si potential periculoase.
+
+<br>In codul de autentificare, aplicatia verifica validitatea datelor introduse comparand parola hash-uita stocata in baza de date cu parola introdusa de utilizator folosind password_verify. In plus, aplicatia gestioneaza sesiuni pentru a mentine utilizatorii autentificati in siguranta.
+    </p>
+</section>
+
+<section id="system-features">
+    <!-- review? -->
+    <h2>Functionalitati</h2>
+    <section id="login">
+        <h3>Autentificarea</h3>
+        <p>
+            Autentificarea utilizatorului se realizeaza in pagina dedicata acestei operatii si presupune
+            completarea campurilor necesare (email si parola) urmand ca apoi utlizatorul
+            sa apese pe butonul "Sign In" si va fi redirectionat pe pagina principala (loggedPage.html), daca si-a creat un cont in trecut, sau pe o pagina intermediara (genres.html unde poate selecta ce categorii de carti prefera), daca este la prima utilizare a aplicatiei.
+        </p>
+    </section>
+    <section id="register">
+        <h3>Inregistrarea</h3>
+        <p>
+            Aceasta operatie presupune creare unui nou cont de utilizator. Utilizatorul completeaza
+            campurile necesare (username, email, parola, confirmare parola), apasa pe butonul
+            "Create Account" si va fi redirectionat pe pagina genres.html.
+        </p>
+    </section>
+
+    <section id="news">
+        <h3>Vizualizarea celor mai populare articole</h3>
+        <p>
+            Bazat pe topicele alese la crearea contului, utlizatorul va putea vedea
+            in pagina loggedPage.html sau la sectiunea "News" cele mai recente articole sub forma unei liste.
+            Fiecare element al listei va contine un titlu si o descriere asupra articolului, iar utilizatorul
+            va putea vizualiza mai multe detalii.
+        </p>
+    </section>
+
+    <section id="user-settings">
+        <h3>Setarile Utilizatorului</h3>
+        <p>
+            Utilizatorul va putea accesa setari asociate contului sau. Acesta nu va putea schimba informatii
+            referitoare la contul personal, username-ul si email-ul acestuia fiind unice de la un user
+            la altul.
+        </p>
+
+    </section>
+
+    <section id="user-interface" role="doc-introduction">
+        <h2>Interfata si Motivatie</h2>
+        <p>
+            Interfata aplicatitei este simpla si in acelasi timp moderna deoarece contine concepte curente cum ar fi:
+            colturi rotunjite, folosirea unui pachet de iconite si a unui font placut vizual, elemente menite sa atraga 
+            utilizatorul.
+        </p>
+        <p>
+            Pentru crearea layout-ului fiecare pagina s-a structurat folosind flex deoarece se poate construi
+            foarte
+            usor interfete dar
+            si alinierea elementelor interne.
+            Foile de stil sass au fost modularizate pentru scalabilitate, fiecare fisier sass reprezinta un singur
+            obiect/layout, astfel
+            o modificare(de exemplu la un buton) se face intr-un fisier iar modificarile se propaga oriunde este folosit
+            acel fisier.
+            De asemenea, pentru a avea un singur loc in care sunt puse dimensiuni/culori au fost create variabile css.
+        </p>
+        <p>
+            Aplicatia este responsive astfel ea poate fi disponibila si pe tablete. Pentru a face acest
+            lucru,
+            atunci
+            cand layout-ul ajunge la o latime minima, el se restructureaza pastrand astfel latimea paginii cu cea a
+            ecranului.
+        </p>
+    </section>
+
+</section>
+
+<section id="other-resources">
+    <h2>Resurse Principale</h2>
+    <ul>
+        <li>https://edu.info.uaic.ro/web-technologies/web-film.html</li>
+        <li>https://tehnologii-web.vercel.app/</li>
+        <li>https://www.w3schools.com/html/default.asp</li>
+        <li>https://www.w3schools.com/sass/default.php</li>
+        <li>https://www.goodreads.com/</li>
+        <li>https://www.bookbrowse.com/blogs/editor/</li>
+        <li>https://www.w3schools.com/php/</li>
+
+    </ul>
+</section>
+
+</body>
+</html>
