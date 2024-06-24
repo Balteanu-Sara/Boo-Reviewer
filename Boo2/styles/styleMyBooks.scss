@@ -1,0 +1,862 @@
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-family: "Poppins", sans-serif;
+$light_pink_color: #efd6ac;
+$dark_blue_color: #1d153a;
+$dark_green_color: #183a37;
+$dark_blue_transition_color: #1d153a62;
+$dark_purple_color: #432534;
+$light_grey_color: #a39fbdb4;
+$almost_black_color: #04151f;
+
+.second-body {
+	display: flex;
+	flex-direction: column;
+	font-family: "Poppins", sans-serif;
+}
+
+.second-main {
+	flex: 1;
+	padding: 20px; /* Spatiu interior pentru a nu lipi elementele de margine */
+	width: 90%;
+}
+
+.myBooks-main {
+	width: 100%; /* Latimea tabelului in functie de parent container */
+	margin-top: 20px; /* Spatiu de sus pentru a nu lipi de header */
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+	padding: 20px; /* Spatiu interior pentru a nu lipi de margine */
+	height: 100%;
+}
+.myBooks-table {
+	min-width: 100%; /* Latimea tabelului */
+	border-collapse: collapse;
+	margin-top: 1rem;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+	min-height: 100%;
+
+	th,
+	td {
+		padding: 1rem; /* Spatiu interior */
+		text-align: left;
+		border-bottom: 1px solid #ddd;
+		//height: 50px; /* Inaltime fixa pentru randurile tabelului */
+	}
+
+	.myBooks-table__row:hover {
+		background-color: #f9f9f9;
+	}
+
+	&__cell {
+		padding: 10px;
+
+		.status-section {
+			display: flex;
+			flex-direction: column;
+			align-items: left;
+			justify-content: left;
+			// height: 100%;
+			gap: 10px;
+
+			input[type="radio"] {
+				display: none;
+
+				&:checked + label {
+					background-color: #168750;
+				}
+			}
+
+			label {
+				padding: 10px 20px;
+				cursor: pointer;
+				background-color: #1b6a7c;
+				color: #ffffff;
+				border-radius: 5px;
+				transition: background-color 0.3s ease;
+				width: 150px;
+				text-align: center;
+
+				&:hover {
+					background-color: #145a5e;
+				}
+			}
+		}
+	}
+
+	&__cover {
+		width: 100px; /* Latime fixa pentru coperti */
+		//height: 50px; /* Inaltime fixa pentru coperti */
+
+		&--img {
+			width: 100%; /* Imaginile umplu toata latimea */
+			//height: auto; /* Inaltime ajustabila in functie de latime */
+			border-radius: 5px;
+		}
+	}
+}
+
+.second-footer {
+	margin-top: auto; /* Footer-ul se plaseaza automat la partea de jos a containerului */
+	padding: 20px; /* Spatiu interior pentru a nu lipi de margine */
+
+	&__links .footer__list .footer__item {
+		list-style: none;
+		display: inline-block;
+		padding: 8px 12px;
+		position: relative;
+		margin-right: 20px;
+	}
+
+	&__links .footer__list .footer__item a {
+		color: #1b635d;
+		font-weight: 500;
+		text-decoration: none;
+		font-size: 15px;
+		font-family: "Poppins", sans-serif;
+	}
+
+	&__links .footer__list .footer__item::after {
+		content: "";
+		width: 0%;
+		// height: 2px;
+		background: #f44336;
+		display: block;
+		margin: auto;
+		transition: 0.5s;
+	}
+
+	&__links .footer__list .footer__item:hover::after {
+		width: 100%;
+	}
+}
+
+// Stilizare pentru clasa sideBar
+.sideBar {
+	width: 110px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 30px 15px;
+	background: rgba(29, 191, 114, 0.5);
+	backdrop-filter: blur(2px);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	transition: width 0.5s;
+
+	&__image--mod {
+		width: 100px;
+		border-radius: 10%;
+		margin: auto;
+		overflow: hidden;
+	}
+
+	&__list,
+	&__special {
+		list-style: none;
+		padding: 0 15px;
+
+		li {
+			margin: 30px 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+
+			i {
+				width: 30px;
+				margin-right: 10px;
+				color: $almost_black_color;
+
+				a {
+					font-size: 14px;
+					color: white;
+					text-decoration: none;
+					display: none;
+					white-space: nowrap;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+
+	&:hover {
+		width: 150px;
+
+		ul li {
+			justify-content: flex-start;
+
+			i {
+				margin-right: 70px;
+
+				a {
+					display: inline;
+					font-family: "Poppins", sans-serif;
+				}
+			}
+		}
+	}
+}
+
+// Stilizare pentru clasa wrapper
+.wrapper {
+	margin: 20px 200px;
+	margin-bottom: 20px;
+	width: calc(
+		100% - 500px
+	); // Se calculează lățimea pentru a se potrivi cu second-main
+	display: flex;
+	flex-direction: column;
+
+	&__header {
+		display: flex;
+		padding: 10px;
+		justify-content: space-around;
+		flex-direction: row;
+
+		&--mod1 {
+			button {
+				padding: 10px 20px;
+				background-color: #dbdbdb;
+				color: $almost_black_color;
+				cursor: pointer;
+				width: 250px;
+				border-radius: 10px;
+				border: 0.5px solid #ddd;
+				margin: 2px;
+
+				&:hover {
+					background-color: rgba(29, 191, 114, 0.7);
+					color: #f44336;
+					border-color: rgba(29, 191, 114, 0.7);
+				}
+
+				a {
+					text-decoration: none;
+					color: black;
+
+					&:hover {
+						background-color: rgba(29, 191, 114, 0.7);
+						color: #f44336;
+						border-color: rgba(29, 191, 114, 0.7);
+					}
+				}
+			}
+
+			input[type="text"] {
+				padding: 10px 20px;
+				width: 250px; //500px
+				border: 1px solid $dark_green_color;
+				border-radius: 15px;
+				background-color: #e8ddca;
+				font-size: 15px;
+				color: $almost_black_color;
+				transition: border-color 0.3s ease;
+				margin: 2px;
+
+				&:hover {
+					border-color: $dark_blue_color;
+				}
+
+				&:focus {
+					border-color: $dark_green_color;
+					box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+					outline: none; /* sterge outline ul pus by default */
+				}
+			}
+		}
+
+		&--mod2 {
+			margin-left: 1%;
+
+			.button {
+				padding: 10px 10px;
+				background-color: #eeeeee;
+				color: $almost_black_color;
+				cursor: pointer;
+				width: 130px;
+				border-radius: 10px;
+				border: 0.5px solid #ddd;
+				margin: 2px;
+
+				&:hover {
+					background-color: rgba(29, 191, 114, 0.7);
+					color: #f44336;
+					border-color: rgba(29, 191, 114, 0.7);
+				}
+
+				a {
+					text-decoration: none;
+					color: black;
+
+					&:hover {
+						background-color: rgba(29, 191, 114, 0.7);
+						color: #f44336;
+						border-color: rgba(29, 191, 114, 0.7);
+					}
+				}
+			}
+		}
+	}
+}
+
+// Stilizare pentru clasa myBooks-main
+.myBooks-main {
+	// modificare
+	width: calc(
+		100% - 190px
+	); // Se calculează lățimea pentru a se potrivi cu second-main
+	margin-left: 160px; // Ajustăm pentru a ține cont de lățimea sideBar-ului
+	margin-right: 20px;
+	//  height: 100vh;
+	&__goBack {
+		display: inline-block;
+		padding: 0.5rem 1rem;
+		background-color: $secondary-color;
+		color: #fff;
+		text-decoration: none;
+		border-radius: 5px;
+		margin-top: 1rem;
+		text-align: center;
+	}
+
+	&__seeMore {
+		text-decoration: none;
+		border: 1px solid #f44336;
+		background: transparent;
+		position: relative;
+		cursor: pointer;
+		font-size: large;
+		display: inline-block;
+		padding: 0.5rem 1rem;
+		background-color: #f44336;
+		color: #fff;
+		border-radius: 5px;
+		margin-top: 1rem;
+		border-color: none;
+	}
+
+	&__addBook {
+		text-decoration: none;
+		border: 1px solid $secondary-color;
+		background: transparent;
+		position: relative;
+		cursor: pointer;
+		font-size: large;
+		display: inline-block;
+		padding: 0.5rem 1rem;
+		background-color: $secondary-color;
+		color: #fff;
+		border-radius: 5px;
+		margin-top: 1rem;
+		border-color: none;
+	}
+}
+
+// Stilizare pentru clasa myBooks-table
+.myBooks-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 1rem;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+
+	th,
+	td {
+		padding: 0.8rem;
+		text-align: center;
+		border-bottom: 1px solid #ddd;
+		height: 50px; // Inaltime fixa pentru randurile tabelului
+	}
+
+	.myBooks-table__row {
+		height: 50px;
+	}
+	.myBooks-table__row:hover {
+		background-color: #f9f9f9;
+	}
+
+	&__cell {
+		padding: 10px;
+
+		.status-section {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			gap: 10px;
+
+			.status-section__row {
+				width: 100%; // Asigură că fiecare element este pe un rând nou
+				display: block; // Transformă fiecare div într-un block element
+				margin-bottom: 10px;
+
+				input[type="radio"] {
+					display: none;
+
+					&:checked + label {
+						background-color: #168750;
+					}
+				}
+
+				label {
+					padding: 10px 20px;
+					cursor: pointer;
+					background-color: #1b6a7c;
+					color: #ffffff;
+					border-radius: 5px;
+					transition: background-color 0.3s ease;
+					width: 150px;
+					text-align: center;
+
+					&:hover {
+						background-color: #145a5e;
+					}
+				}
+			}
+		}
+	}
+
+	// Ajustam dimensiunile imaginilor pentru a fi uniforme
+	&__cover {
+		width: 100px; // Latime fixa pentru coperti
+		height: 50px; // Inaltime fixa pentru coperti
+
+		&--img {
+			width: 100%; // Imaginile umplu toata latimea
+			height: 150px; // Inaltime ajustabila in functie de latime
+			border-radius: 5px;
+		}
+	}
+}
+
+// Stilizare pentru clasa button--add-books
+.button--add-books {
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	background-color: $secondary-color;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	margin-top: 1rem;
+}
+
+// Stilizare pentru clasa second-footer
+.second-footer {
+	margin-top: auto;
+	text-align: center;
+
+	&__links {
+		.footer__list .footer__item {
+			list-style: none;
+			display: inline-block;
+			padding: 8px 12px;
+			position: relative;
+			margin-right: 20px;
+
+			a {
+				color: #1b635d;
+				font-weight: 500;
+				text-decoration: none;
+				font-size: 15px;
+				font-family: $font-family;
+			}
+
+			&::after {
+				content: "";
+				width: 0%;
+				height: 2px;
+				background: #f44336;
+				display: block;
+				margin: auto;
+				transition: 0.5s;
+			}
+
+			&:hover::after {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.second-main,
+	.myBooks-main {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.sideBar {
+		width: 80px;
+
+		&:hover {
+			width: 120px;
+
+			ul li {
+				i {
+					margin-right: 40px;
+
+					a {
+						display: inline;
+					}
+				}
+			}
+		}
+	}
+
+	.wrapper {
+		margin: 10px 50px;
+		width: calc(100% - 100px);
+	}
+
+	.wrapper__header--mod1,
+	.wrapper__header--mod2 {
+		width: 100%;
+		flex-direction: column;
+
+		button,
+		input[type="text"] {
+			width: 100%;
+			margin: 5px 0;
+		}
+	}
+
+	.myBooks-table th,
+	.myBooks-table td {
+		padding: 0.5rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.second-main,
+	.myBooks-main {
+		padding: 10px;
+	}
+
+	.sideBar {
+		display: none;
+	}
+
+	.wrapper {
+		margin: 10px 20px;
+		width: calc(100% - 40px);
+	}
+
+	.wrapper__header--mod1,
+	.wrapper__header--mod2 {
+		width: 100%;
+		flex-direction: column;
+
+		button,
+		input[type="text"] {
+			width: 100%;
+			margin: 5px 0;
+		}
+	}
+
+	.myBooks-table th,
+	.myBooks-table td {
+		padding: 0.3rem;
+		font-size: 12px;
+	}
+
+	.myBooks-table__cell .status-section label {
+		width: 100px;
+		font-size: 12px;
+	}
+
+	.button--add-books {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.book-summary {
+	&__cover {
+		width: 400px;
+		height: 500px;
+	}
+
+	p {
+	}
+}
+
+.book-summary {
+	display: flex;
+}
+
+.book-summary__left,
+.book-summary__right {
+	flex: 1;
+	padding: 10px;
+	margin-right: 20px;
+}
+
+.book-summary__left {
+	max-width: 40%;
+}
+
+.book-summary__rigth {
+	max-width: 60%;
+
+	// border: #04151f 1px;
+	div {
+		margin-top: 100px;
+		padding-right: 100px;
+		padding-left: 60px;
+	}
+}
+
+.myBooks-main__buttons {
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+}
+
+// ---------------------------------------
+
+.wrapper {
+	margin: 20px 200px;
+	margin-bottom: 20px;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.wrapper__header {
+	display: flex;
+	padding: 10px;
+	justify-content: space-around;
+	flex-direction: row;
+}
+.wrapper__header--mod1 {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+}
+.wrapper__header--mod1 button {
+	padding: 10px 20px;
+	background-color: #dbdbdb;
+	color: #04151f;
+	cursor: pointer;
+	width: 350px;
+	border-radius: 10px;
+	border: 0.5px solid #eeeeee;
+	margin: 2px;
+}
+.wrapper__header--mod1 button:hover {
+	background-color: rgba(29, 191, 114, 0.7);
+	color: #f44336;
+	border-color: rgba(29, 191, 114, 0.7);
+}
+.wrapper__header--mod1 button a {
+	text-decoration: none;
+	color: black;
+}
+.wrapper__header--mod1 button a:hover {
+	background-color: rgba(29, 191, 114, 0.7);
+	color: #f44336;
+	border-color: rgba(29, 191, 114, 0.7);
+}
+.wrapper__header--mod1 input[type="text"] {
+	padding: 10px 20px;
+	width: 80%;
+	border: 1px solid rgba(0, 0, 0, 0.725);
+	border-radius: 15px;
+	background-color: #eeeeee;
+	font-size: 15px;
+	color: #04151f;
+	transition: border-color 0.3s ease;
+	margin: 2px;
+}
+.wrapper__header--mod1 input[type="text"]:hover {
+	border-color: #1d153a;
+}
+.wrapper__header--mod1 input[type="text"]:focus {
+	border-color: #183a37;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	outline: none; /* sterge outline ul pus by default */
+}
+.wrapper__header--mod2 {
+	margin-left: 1%;
+	width: 50%;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+	font-size: 80%;
+}
+.wrapper__header--mod2 .button {
+	padding: 10px 10px;
+	background-color: #eeeeee;
+	color: #04151f;
+	cursor: pointer;
+	width: 130px;
+	border-radius: 10px;
+	border: 0.5px solid #ddd;
+	margin: 2px;
+}
+.wrapper__header--mod2 .button:hover {
+	background-color: rgba(29, 191, 114, 0.7);
+	color: #f44336;
+	border-color: rgba(29, 191, 114, 0.7);
+}
+.wrapper__header--mod2 .button a {
+	text-decoration: none;
+	color: black;
+}
+.wrapper__header--mod2 .button a:hover {
+	background-color: rgba(29, 191, 114, 0.7);
+	color: #f44336;
+	border-color: rgba(29, 191, 114, 0.7);
+}
+
+.wrapper__footer {
+	width: 100%;
+	text-align: center;
+	padding: 10px 0px;
+	align-self: center;
+	justify-self: flex-end;
+
+	ul li {
+		list-style: none; /*fara bullets*/
+		display: inline-block; /*afiseaza textul orizontal*/
+		padding: 8px 12px; /*spatiu*/
+		position: relative;
+		margin-right: 20px;
+
+		a {
+			/*culorile link-urilor*/
+			color: $light_pink_color;
+			text-decoration: none; /*sa nu apara cu linia aia de la linkuri*/
+			font-size: 15px;
+			font-family: "Poppins", sans-serif; /*vezi google fonts*/
+		}
+
+		&::after {
+			/*liniuta de sub linkuri*/
+			content: "";
+			width: 0%; /*face ca liniuta sa dispara, cu 100% apare*/
+			height: 2px;
+			background: #f44336;
+			display: block;
+			margin: auto;
+			transition: 0.5s;
+		}
+
+		&:hover::after {
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 1320px) {
+	.wrapper__header {
+		flex-direction: column;
+	}
+	.wrapper__header--mod1 {
+		width: 70%;
+		margin-bottom: 10px;
+	}
+	.wrapper__header--mod2 {
+		width: 70%;
+	}
+
+	.wrapper__containers {
+		margin-left: 180px;
+		margin-right: 5%;
+	}
+
+	.wrapper__footer {
+		margin-right: 15%;
+	}
+}
+
+@media (max-width: 1316px) {
+	.book-summary {
+		padding: 20px;
+		&__left {
+			img {
+				width: 100%;
+				height: 60%;
+			}
+			p {
+				font-size: small;
+			}
+		}
+
+		&__rigth {
+			div {
+				padding-right: 0px;
+				padding-left: 0px;
+				margin-top: 60px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.myBooks-main {
+		margin-left: 140px;
+		width: calc(100% - 150px);
+	}
+
+	.book-summary {
+		&__left {
+			img {
+				width: 100%;
+				height: 30%;
+			}
+		}
+		&__rigth {
+			div {
+				font-size: small;
+			}
+		}
+	}
+}
+
+@media (max-width: 978px) {
+	.myBooks-table {
+		min-width: 150px; /* Latimea tabelului */
+		max-width: 150px;
+		tbody {
+			width: 100px;
+			tr {
+				th {
+					font-size: small;
+				}
+				td{
+					width: 10px;
+					font-size: 10px;
+				}
+			}
+		}
+	}
+
+	.myBooks-table .myBooks-table__row {
+		width: 50px;
+	}
+
+	.wrapper__header--mod2 {
+		font-size: 70%;
+	}
+}
+
+.container{
+	color: #1f1e23;
+	.button{
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	background-color: #f44336;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	margin-top: 1rem;
+	border-color: #f44336; 
+	}
+}

@@ -1,0 +1,558 @@
+$light_pink_color: #efd6ac;
+$dark_purple_color: #432534;
+$emerald_color: #1dbf72;
+$dark_green_color: #183a37;
+$light_orange_color: #c44900;
+$dark_blue_color: #1d153a;
+$almost_black_color: #04151f;
+$light_grey_color: #a39fbdb4;
+
+// ------------------------------------------------------------------------------------------
+
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-family: "Poppins", sans-serif;
+$light_pink_color: #efd6ac;
+$dark_blue_color: #1d153a;
+$dark_green_color: #183a37;
+$dark_blue_transition_color: #1d153a62;
+$dark_purple_color: #432534;
+$light_grey_color: #a39fbdb4;
+$almost_black_color: #04151f;
+
+.second-body {
+	display: flex;
+	flex-direction: column;
+	font-family: "Poppins", sans-serif;
+}
+
+.news-main {
+	flex: 1;
+	padding: 20px; /* Spatiu interior pentru a nu lipi elementele de margine */
+	width: 80%;
+	margin-left: 150px;
+
+
+	.wrapper__containers {
+		padding: 20px;
+		margin-left: 50px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		background-color: #1b635d;
+		border-radius: 10px;
+		margin-bottom: 20px;
+
+		.category {
+			h2 {
+				color: #dbdbdb;
+			}
+
+      li{
+        color: #dbdbdb;
+      }
+		}
+	}
+}
+
+.myBooks-main {
+	width: 100%; /* Latimea tabelului in functie de parent container */
+	margin-top: 20px; /* Spatiu de sus pentru a nu lipi de header */
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+	padding: 20px; /* Spatiu interior pentru a nu lipi de margine */
+	height: 100%;
+}
+
+.second-footer {
+	margin-top: auto; /* Footer-ul se plaseaza automat la partea de jos a containerului */
+	padding: 20px; /* Spatiu interior pentru a nu lipi de margine */
+	margin-top: auto;
+	text-align: center;
+
+	&__links {
+		.footer__list .footer__item {
+			list-style: none;
+			display: inline-block;
+			padding: 8px 12px;
+			position: relative;
+			margin-right: 20px;
+
+			a {
+				color: #1b635d;
+				font-weight: 500;
+				text-decoration: none;
+				font-size: 15px;
+				font-family: $font-family;
+			}
+
+			&::after {
+				content: "";
+				width: 0%;
+				height: 2px;
+				background: #f44336;
+				display: block;
+				margin: auto;
+				transition: 0.5s;
+			}
+
+			&:hover::after {
+				width: 100%;
+			}
+		}
+	}
+}
+
+// Stilizare pentru clasa sideBar
+.sideBar {
+	width: 110px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 30px 15px;
+	background: rgba(29, 191, 114, 0.5);
+	backdrop-filter: blur(2px);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	transition: width 0.5s;
+
+	&__image--mod {
+		width: 100px;
+		border-radius: 10%;
+		margin: auto;
+		overflow: hidden;
+	}
+
+	&__list,
+	&__special {
+		list-style: none;
+		padding: 0 15px;
+
+		li {
+			margin: 30px 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+
+			i {
+				width: 30px;
+				margin-right: 10px;
+				color: $almost_black_color;
+
+				a {
+					font-size: 14px;
+					color: white;
+					text-decoration: none;
+					display: none;
+					white-space: nowrap;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+
+	&:hover {
+		width: 150px;
+
+		ul li {
+			justify-content: flex-start;
+
+			i {
+				margin-right: 70px;
+
+				a {
+					display: inline;
+					font-family: "Poppins", sans-serif;
+				}
+			}
+		}
+	}
+}
+
+// Stilizare pentru clasa wrapper
+.wrapper {
+	margin: 20px 200px;
+	margin-bottom: 20px;
+	width: calc(
+		100% - 500px
+	); // Se calculează lățimea pentru a se potrivi cu news-main
+	display: flex;
+	flex-direction: column;
+
+	&__header {
+		display: flex;
+		padding: 10px;
+		justify-content: space-around;
+		flex-direction: row;
+
+		&--mod1 {
+			display: flex;
+			flex-direction: column;
+			width: 50%;
+
+			button {
+				padding: 10px 20px;
+				background-color: #dbdbdb;
+				color: $almost_black_color;
+				cursor: pointer;
+				width: 150px;
+				border-radius: 10px;
+				border: 0.5px solid #eeeeee;
+				margin: 2px;
+
+				&:hover {
+					background-color: rgba(29, 191, 114, 0.7);
+					color: #f44336;
+					border-color: rgba(29, 191, 114, 0.7);
+				}
+
+				a {
+					text-decoration: none;
+					color: black;
+
+					&:hover {
+						background-color: rgba(29, 191, 114, 0.7);
+						color: #f44336;
+						border-color: rgba(29, 191, 114, 0.7);
+					}
+				}
+			}
+
+			input[type="text"] {
+				padding: 10px 20px;
+				width: 80%;
+				border: 1px solid rgba(0, 0, 0, 0.725);
+				border-radius: 15px;
+				background-color: #eeeeee;
+				font-size: 15px;
+				color: $almost_black_color;
+				transition: border-color 0.3s ease;
+				margin: 2px;
+
+				&:hover {
+					border-color: $dark_blue_color;
+				}
+
+				&:focus {
+					border-color: $dark_green_color;
+					box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+					outline: none;
+				}
+			}
+		}
+
+		&--mod2 {
+			margin-left: 1%;
+
+			.button {
+				padding: 10px 10px;
+				background-color: #eeeeee;
+				color: $almost_black_color;
+				cursor: pointer;
+				width: 130px;
+				border-radius: 10px;
+				border: 0.5px solid #ddd;
+				margin: 2px;
+
+				&:hover {
+					background-color: rgba(29, 191, 114, 0.7);
+					color: #f44336;
+					border-color: rgba(29, 191, 114, 0.7);
+				}
+
+				a {
+					text-decoration: none;
+					color: black;
+
+					&:hover {
+						background-color: rgba(29, 191, 114, 0.7);
+						color: #f44336;
+						border-color: rgba(29, 191, 114, 0.7);
+					}
+				}
+			}
+		}
+	}
+}
+
+// Stilizare pentru clasa myBooks-main
+.myBooks-main {
+}
+
+@media (max-width: 768px) {
+	.news-main,
+	.myBooks-main {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.sideBar {
+		width: 80px;
+
+		&:hover {
+			width: 120px;
+
+			ul li {
+				i {
+					margin-right: 40px;
+
+					a {
+						display: inline;
+					}
+				}
+			}
+		}
+	}
+
+	.wrapper {
+		margin: 10px 50px;
+		width: calc(100% - 100px);
+	}
+
+	.wrapper__header--mod1,
+	.wrapper__header--mod2 {
+		width: 100%;
+		flex-direction: column;
+
+		button,
+		input[type="text"] {
+			width: 100%;
+			margin: 5px 0;
+		}
+	}
+
+	.myBooks-table th,
+	.myBooks-table td {
+		padding: 0.5rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.news-main,
+	.myBooks-main {
+		padding: 10px;
+	}
+
+	.sideBar {
+		display: none;
+	}
+
+	.wrapper {
+		margin: 10px 20px;
+		width: calc(100% - 40px);
+	}
+
+	.wrapper__header--mod1,
+	.wrapper__header--mod2 {
+		width: 100%;
+		flex-direction: column;
+
+		button,
+		input[type="text"] {
+			width: 100%;
+			margin: 5px 0;
+		}
+	}
+}
+
+.wrapper {
+	margin: 20px 200px;
+	margin-bottom: 20px;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.wrapper__header {
+	display: flex;
+	padding: 10px;
+	justify-content: space-around;
+	flex-direction: row;
+}
+.wrapper__header--mod1 {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+}
+.wrapper__header--mod1 button {
+	padding: 10px 20px;
+	background-color: #dbdbdb;
+	color: #04151f;
+	cursor: pointer;
+	width: 350px;
+	border-radius: 10px;
+	border: 0.5px solid #eeeeee;
+	margin: 2px;
+}
+.wrapper__header--mod1 button:hover {
+	background-color: rgba(29, 191, 114, 0.7);
+	color: #f44336;
+	border-color: rgba(29, 191, 114, 0.7);
+}
+.wrapper__header--mod1 button a {
+	text-decoration: none;
+	color: black;
+}
+.wrapper__header--mod1 button a:hover {
+	background-color: rgba(29, 191, 114, 0.7);
+	color: #f44336;
+	border-color: rgba(29, 191, 114, 0.7);
+}
+.wrapper__header--mod1 input[type="text"] {
+	padding: 10px 20px;
+	width: 80%;
+	border: 1px solid rgba(0, 0, 0, 0.725);
+	border-radius: 15px;
+	background-color: #eeeeee;
+	font-size: 15px;
+	color: #04151f;
+	transition: border-color 0.3s ease;
+	margin: 2px;
+}
+.wrapper__header--mod1 input[type="text"]:hover {
+	border-color: #1d153a;
+}
+.wrapper__header--mod1 input[type="text"]:focus {
+	border-color: #183a37;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	outline: none; /* sterge outline ul pus by default */
+}
+.wrapper__header--mod2 {
+	margin-left: 1%;
+	width: 50%;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+	font-size: 80%;
+}
+.wrapper__header--mod2 .button {
+	padding: 10px 10px;
+	background-color: #eeeeee;
+	color: #04151f;
+	cursor: pointer;
+	width: 130px;
+	border-radius: 10px;
+	border: 0.5px solid #ddd;
+	margin: 2px;
+}
+.wrapper__header--mod2 .button:hover {
+	background-color: rgba(29, 191, 114, 0.7);
+	color: #f44336;
+	border-color: rgba(29, 191, 114, 0.7);
+}
+.wrapper__header--mod2 .button a {
+	text-decoration: none;
+	color: black;
+}
+.wrapper__header--mod2 .button a:hover {
+	background-color: rgba(29, 191, 114, 0.7);
+	color: #f44336;
+	border-color: rgba(29, 191, 114, 0.7);
+}
+
+.wrapper__footer {
+	width: 100%;
+	text-align: center;
+	padding: 10px 0px;
+	align-self: center;
+	justify-self: flex-end;
+
+	ul li {
+		list-style: none; /*fara bullets*/
+		display: inline-block; /*afiseaza textul orizontal*/
+		padding: 8px 12px; /*spatiu*/
+		position: relative;
+		margin-right: 20px;
+
+		a {
+			/*culorile link-urilor*/
+			color: $light_pink_color;
+			text-decoration: none; /*sa nu apara cu linia aia de la linkuri*/
+			font-size: 15px;
+			font-family: "Poppins", sans-serif; /*vezi google fonts*/
+		}
+
+		&::after {
+			/*liniuta de sub linkuri*/
+			content: "";
+			width: 0%; /*face ca liniuta sa dispara, cu 100% apare*/
+			height: 2px;
+			background: #f44336;
+			display: block;
+			margin: auto;
+			transition: 0.5s;
+		}
+
+		&:hover::after {
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 1320px) {
+	.wrapper__header {
+		flex-direction: column;
+	}
+	.wrapper__header--mod1 {
+		width: 70%;
+		margin-bottom: 10px;
+	}
+	.wrapper__header--mod2 {
+		width: 70%;
+	}
+
+	.wrapper__containers {
+		margin-left: 180px;
+		margin-right: 5%;
+	}
+
+	.wrapper__footer {
+		margin-right: 15%;
+	}
+}
+
+@media (max-width: 1316px) {
+	.book-summary {
+		padding: 20px;
+		&__left {
+			img {
+				width: 100%;
+				height: 60%;
+			}
+			p {
+				font-size: small;
+			}
+		}
+
+		&__rigth {
+			div {
+				padding-right: 0px;
+				padding-left: 0px;
+				margin-top: 60px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.wrapper{
+		margin-left: 140px;
+	}
+	.wrapper__header--mod2 {
+		font-size: 70%;
+	}
+	.wrapper__header--mod1 button{
+		width: 90%;
+	}
+
+	.news-main{
+		margin-left: 90px;
+	}
+
+	.news-main .wrapper__containers{
+		width: 55%;
+		font-size: 12px;
+	}
+}
