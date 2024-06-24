@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles/style.css" />
+		<title>Sign In</title>
+		<script src="scripts/sign-in_script.js"></script>
+	</head>
+	<body>
+		<header class="header">
+			<img
+				class="header__logo"
+				src="styles/images/logouri/logo-color.png"
+				alt="Boo_logo"
+			/>
+			<h1 class="header__title">Sign In</h1>
+		</header>
+		<main class="main">
+			<form id="loginForm" class="account-form" onsubmit="loginUser(event)">
+				<input
+					class="account-form__input"
+					type="email"
+					name="email"
+					id="email"
+					placeholder="Email"
+					required
+				/>
+				<input
+					class="account-form__input"
+					type="password"
+					name="password"
+					id="password"
+					placeholder="Password"
+					required
+				/>
+				<button type="submit" class="account-form__submit-btn btn">
+					Sign In
+				</button>
+			</form>
+			<h4 class="account-message">
+				New to Boo? <br />
+				<a href="createAccount.html" class="account-message__link sign-in">Make an account</a>
+			</h4>
+		</main>
+		<footer class="footer">
+			<div class="footer__links">
+				<ul class="footer__list">
+					<li class="footer__item">
+						<a href="termsOfService.html" class="footer__link">Terms of Service</a>
+					</li>
+					<li class="footer__item">
+						<a href="privacyPolicy.html" class="footer__link">Privacy</a>
+					</li>
+					<li class="footer__item">
+						<a href="helpPage.html" class="footer__link">Help</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>

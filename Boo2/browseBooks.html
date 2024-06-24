@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<script
+			src="https://kit.fontawesome.com/7caa4bdb6b.js"
+			crossorigin="anonymous"
+		></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<title>Browse Books</title>
+	</head>
+	<body class="second-body">
+		<header class="second-header">
+			<div class="sideBar">
+				<div class="sideBar__image">
+					<img
+						src="styles/images/logouri/logo-black.png"
+						class="sideBar__image--mod"
+						alt="Boo Logo"
+					/>
+				</div>
+				<ul class="sideBar__list">
+					<li>
+						<i class="fa fa-home fa-lg" aria-hidden="true"
+							><a href="loggedPage.html" class="simple-text">Home</a></i
+						>
+					</li>
+					<li>
+						<i class="fa fa-book fa-lg" aria-hidden="true"
+							><a href="myBooks.html" class="simple-text">My books</a></i
+						>
+					</li>
+					<li>
+						<i class="fa fa-users fa-lg" aria-hidden="true"
+							><a href="communityPage.html" class="simple-text">Community</a></i
+						>
+					</li>
+					<li>
+						<i class="fa fa-pie-chart fa-lg" aria-hidden="true"
+							><a href="newsPage.html" class="simple-text">News</a></i
+						>
+					</li>
+				</ul>
+				<ul class="sideBar__special fa-lg">
+					<li>
+						<i class="fa fa-sign-out"
+							><a href="php/logout.php" class="simple-text">Sign Out</a></i
+						>
+					</li>
+				</ul>
+			</div>
+			<div class="wrapper">
+				<div class="wrapper__header">
+					<div class="wrapper__header--mod1">
+            <button type="button" onclick="window.location.href='browseBooks.html'">
+              <i class="fa-solid fa-magnifying-glass fa-lg"> Browse Books</i>
+            </button>
+          </div>
+
+					<div class="wrapper__header--mod2">
+						<div class="button">
+							<i class="fa fa-user fa-lg"></i>
+							<a href="profilePage.html">Profile</a>
+						</div>
+						<div class="button">
+							<i class="fa fa-envelope fa-lg"></i>
+							<a href="notificationsPage.html">Notifications</a>
+						</div>
+						<div class="button">
+							<i class="fa fa-heart fa-lg"></i>
+							<a href="friendsPage.html">Friends</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="second-main">
+			<h2>Art</h2>
+			<div class="books-container" id="art-books-container"></div>
+
+			<h2>Biography</h2>
+			<div class="books-container" id="biography-books-container"></div>
+
+			<h2>Business</h2>
+			<div class="books-container" id="business-books-container"></div>
+
+			<h2>Children's</h2>
+			<div class="books-container" id="children-books-container"></div>
+
+			<h2>Comics</h2>
+			<div class="books-container" id="comics-books-container"></div>
+
+			<h2>Crime</h2>
+			<div class="books-container" id="crime-books-container"></div>
+
+			<h2>Fantasy</h2>
+			<div class="books-container" id="fantasy-books-container"></div>
+
+			<h2>Fiction</h2>
+			<div class="books-container" id="fiction-books-container"></div>
+
+			<h2>History</h2>
+			<div class="books-container" id="history-books-container"></div>
+
+			<h2>Horror</h2>
+			<div class="books-container" id="horror-books-container"></div>
+
+			<h2>Humor & Comedy</h2>
+			<div class="books-container" id="humor&comedy-books-container"></div>
+
+			<h2>Music</h2>
+			<div class="books-container" id="music-books-container"></div>
+
+			<h2>Mystery</h2>
+			<div class="books-container" id="mystery-books-container"></div>
+
+			<h2>Nonfiction</h2>
+			<div class="books-container" id="nonfiction-books-container"></div>
+
+			<h2>Philosophy</h2>
+			<div class="books-container" id="philosophy-books-container"></div>
+
+			<h2>Poetry</h2>
+			<div class="books-container" id="poetry-books-container"></div>
+
+			<h2>Psychology</h2>
+			<div class="books-container" id="psychology-books-container"></div>
+
+			<h2>Religion</h2>
+			<div class="books-container" id="religion-books-container"></div>
+
+			<h2>Romance</h2>
+			<div class="books-container" id="romance-books-container"></div>
+
+			<h2>Science</h2>
+			<div class="books-container" id="science-books-container"></div>
+
+			<h2>Science Fiction</h2>
+			<div class="books-container" id="science_fiction-books-container"></div>
+
+			<h2>Spirituality</h2>
+			<div class="books-container" id="spirituality-books-container"></div>
+
+			<h2>Sports</h2>
+			<div class="books-container" id="sports-books-container"></div>
+
+			<h2>Thriller</h2>
+			<div class="books-container" id="thriller-books-container"></div>
+
+			<h2>Travel</h2>
+			<div class="books-container" id="travel-books-container"></div>
+		</main>
+		<script src="scripts/fillBookCollection_script.js"></script>
+
+		<footer class="second-footer">
+			<div class="second-footer__links">
+				<ul class="footer__list">
+					<li class="footer__item">
+						<a href="termsOfService.html" class="footer__link">Terms of Service</a>
+					</li>
+					<li class="footer__item">
+						<a href="privacyPolicy.html" class="footer__link">Privacy</a>
+					</li>
+					<li class="footer__item">
+						<a href="helpPage.html" class="footer__link">Help</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles/style.css" />
+		<title>Select Your Favourite Genres</title>
+		<script src="scripts/genres_script.js"></script>
+	</head>
+	<body>
+		<header class="header">
+			<img
+				class="header__logo"
+				src="styles/images/logouri/logo-color.png"
+				alt="Boo_logo"
+			/>
+			<h1 class="header__title">Select Your Favourite Genres</h1>
+		</header>
+		<main class="main">
+			<form class="genre_form" id="genreForm" onsubmit="saveGenres(event)">
+				<div class="button-container">
+					<!-- Row 1 -->
+					<div class="button-container__row">
+						<label class="button-container__button" for="art"
+							>Art
+							<input type="checkbox" id="art" name="genre" value="Art" />
+						</label>
+						<label class="button-container__button" for="biography"
+							>Biography
+							<input
+								type="checkbox"
+								id="biography"
+								name="genre"
+								value="Biography"
+							/>
+						</label>
+						<label class="button-container__button" for="business"
+							>Business
+							<input
+								type="checkbox"
+								id="business"
+								name="genre"
+								value="Business"
+							/>
+						</label>
+						<label class="button-container__button" for="children"
+							>Children's
+							<input
+								type="checkbox"
+								id="children"
+								name="genre"
+								value="Children's"
+							/>
+						</label>
+						<label class="button-container__button" for="comics"
+							>Comics
+							<input type="checkbox" id="comics" name="genre" value="Comics" />
+						</label>
+					</div>
+					<!-- Row 2 -->
+					<div class="button-container__row">
+						<label class="button-container__button" for="crime"
+							>Crime
+							<input type="checkbox" id="crime" name="genre" value="Crime" />
+						</label>
+						<label class="button-container__button" for="fantasy"
+							>Fantasy
+							<input
+								type="checkbox"
+								id="fantasy"
+								name="genre"
+								value="Fantasy"
+							/>
+						</label>
+						<label class="button-container__button" for="fiction"
+							>Fiction
+							<input
+								type="checkbox"
+								id="fiction"
+								name="genre"
+								value="Fiction"
+							/>
+						</label>
+						<label class="button-container__button" for="history"
+							>History
+							<input
+								type="checkbox"
+								id="history"
+								name="genre"
+								value="History"
+							/>
+						</label>
+						<label class="button-container__button" for="horror"
+							>Horror
+							<input type="checkbox" id="horror" name="genre" value="Horror" />
+						</label>
+					</div>
+					<!-- Row 3 -->
+					<div class="button-container__row">
+						<label class="button-container__button" for="humor_and_comedy"
+							>Humor & Comedy
+							<input
+								type="checkbox"
+								id="humor_and_comedy"
+								name="genre"
+								value="Humor & Comedy"
+							/>
+						</label>
+						<label class="button-container__button" for="music"
+							>Music
+							<input type="checkbox" id="music" name="genre" value="Music" />
+						</label>
+						<label class="button-container__button" for="mystery"
+							>Mystery
+							<input
+								type="checkbox"
+								id="mystery"
+								name="genre"
+								value="Mystery"
+							/>
+						</label>
+						<label class="button-container__button" for="nonfiction"
+							>Nonfiction
+							<input
+								type="checkbox"
+								id="nonfiction"
+								name="genre"
+								value="Nonfiction"
+							/>
+						</label>
+						<label class="button-container__button" for="philosophy"
+							>Philosophy
+							<input
+								type="checkbox"
+								id="philosophy"
+								name="genre"
+								value="Philosophy"
+							/>
+						</label>
+					</div>
+					<!-- Row 4 -->
+					<div class="button-container__row">
+						<label class="button-container__button" for="poetry"
+							>Poetry
+							<input type="checkbox" id="poetry" name="genre" value="Poetry" />
+						</label>
+						<label class="button-container__button" for="psychology"
+							>Psychology
+							<input
+								type="checkbox"
+								id="psychology"
+								name="genre"
+								value="Psychology"
+							/>
+						</label>
+						<label class="button-container__button" for="religion"
+							>Religion
+							<input
+								type="checkbox"
+								id="religion"
+								name="genre"
+								value="Religion"
+							/>
+						</label>
+						<label class="button-container__button" for="romance"
+							>Romance
+							<input
+								type="checkbox"
+								id="romance"
+								name="genre"
+								value="Romance"
+							/>
+						</label>
+						<label class="button-container__button" for="science"
+							>Science
+							<input
+								type="checkbox"
+								id="science"
+								name="genre"
+								value="Science"
+							/>
+						</label>
+					</div>
+					<!-- Row 5 -->
+					<div class="button-container__row">
+						<label class="button-container__button" for="science_fiction"
+							>Science Fiction
+							<input
+								type="checkbox"
+								id="science_fiction"
+								name="genre"
+								value="Science Fiction"
+							/>
+						</label>
+						<label class="button-container__button" for="spirituality"
+							>Spirituality
+							<input
+								type="checkbox"
+								id="spirituality"
+								name="genre"
+								value="Spirituality"
+							/>
+						</label>
+						<label class="button-container__button" for="sports"
+							>Sports
+							<input type="checkbox" id="sports" name="genre" value="Sports" />
+						</label>
+						<label class="button-container__button" for="thriller"
+							>Thriller
+							<input
+								type="checkbox"
+								id="thriller"
+								name="genre"
+								value="Thriller"
+							/>
+						</label>
+						<label class="button-container__button" for="travel"
+							>Travel
+							<input type="checkbox" id="travel" name="genre" value="Travel" />
+						</label>
+					</div>
+				</div>
+				<button type="submit" class="continue-link">Continue</button>
+			</form>
+		</main>
+		<footer class="footer">
+			<div class="footer__links">
+				<ul class="footer__list">
+					<li class="footer__item">
+						<a href="termsOfService.html" class="footer__link">Terms of Service</a>
+					</li>
+					<li class="footer__item">
+						<a href="privacyPolicy.html" class="footer__link">Privacy</a>
+					</li>
+					<li class="footer__item">
+						<a href="helpPage.html" class="footer__link">Help</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>
